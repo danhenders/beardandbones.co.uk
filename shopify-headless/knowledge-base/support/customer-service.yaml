@@ -1,0 +1,264 @@
+metadata:
+  type: Support Document
+  category: Customer Service
+  version: "2025"
+  last_updated: "2024-01-30"
+  priority: High
+
+overview: |
+  This document outlines common customer service scenarios and their resolution processes.
+  It serves as a comprehensive guide for handling various customer issues consistently and effectively.
+
+issue_categories:
+  order_issues:
+    - "Wrong Item Received"
+    - "Missing Item from Order"
+    - "Missing Parcel"
+    - "Delivered but Not Received"
+    - "Damaged Items"
+    - "Delayed Shipment"
+    - "Wrong Address Provided"
+    - "Duplicate Order"
+    - "Out-of-Stock or Backordered Items"
+    - "Request for Cancellation"
+  
+  payment_refund:
+    - "Refund Request"
+    - "Payment Issues"
+    - "Chargebacks"
+    - "Issue with Discount Code"
+  
+  product_issues:
+    - "Product Performance Concern"
+    - "Allergic Reaction or Sensitivity"
+    - "Exchange Request"
+  
+  tracking_delivery:
+    - "Tracking Issues"
+    - "Missing Parcel"
+    - "Delivered but Not Received"
+
+resolution_processes:
+  wrong_item:
+    stages:
+      initial_contact:
+        steps:
+          - action: "Acknowledge the Issue"
+            tasks:
+              - "Send an apologetic email"
+              - "Express understanding"
+              - "Assure prompt resolution"
+          
+          - action: "Request Information"
+            required:
+              - "Image of wrong item received"
+              - "Image of packaging and shipping label (optional)"
+              - "Order ID if not provided"
+          
+          - action: "Confirm the Issue"
+            tasks:
+              - "Review images"
+              - "Compare with order details"
+      
+      resolution:
+        options:
+          correct_item_available:
+            action: "Ship immediately at no cost"
+          item_unavailable:
+            action: "Offer refund or replacement of equal value"
+        communication:
+          - "Explain options clearly"
+          - "Confirm customer preference"
+      
+      return_process:
+        requirements:
+          - "Original packaging requirement"
+          - "Unused/undamaged condition"
+          - "Provide prepaid return label"
+        exceptions:
+          low_value:
+            threshold: 10
+            action: "Consider letting customer keep item"
+      
+      internal_resolution:
+        fulfillment_notification:
+          - "Share order details"
+          - "Include customer images"
+          - "Track return status"
+        follow_up:
+          - "Thank customer"
+          - "Confirm resolution"
+          - "Offer goodwill gesture if appropriate"
+
+  missing_item:
+    stages:
+      verification:
+        checks:
+          - "Verify packing process"
+          - "Request package contents image"
+          - "Review shipping documentation"
+      resolution:
+        packing_error:
+          action: "Ship missing item immediately"
+          cost: "No additional cost to customer"
+        lost_in_transit:
+          action: "Treat as missing parcel case"
+          process: "Follow missing parcel protocol"
+
+  missing_parcel:
+    stages:
+      investigation:
+        verify_details:
+          - "Order number"
+          - "Delivery address"
+          - "Tracking information"
+        tracking_check:
+          - "Review courier system"
+          - "Verify delivery status"
+          - "Note any delays"
+      resolution:
+        confirmed_lost:
+          options:
+            - "Resend order"
+            - "Issue full refund"
+        delayed:
+          actions:
+            - "Inform customer of new timeline"
+            - "Offer shipping compensation"
+
+  delivered_not_received:
+    stages:
+      investigation:
+        gather_info:
+          - "Delivery confirmation details"
+          - "GPS data if available"
+          - "Photo evidence from courier"
+        customer_verification:
+          - "Check with neighbors"
+          - "Review common delivery spots"
+          - "Confirm delivery address"
+      resolution:
+        if_stolen:
+          - "Resend order"
+          - "Consider filing courier claim"
+        if_misdelivered:
+          - "Initiate courier investigation"
+          - "Resend or refund based on findings"
+
+  damaged_items:
+    stages:
+      documentation:
+        required_photos:
+          - "Damaged item"
+          - "Packaging condition"
+          - "Shipping label"
+        assessment:
+          - "Transit damage vs packaging issue"
+          - "Product defect evaluation"
+      resolution:
+        immediate_actions:
+          - "Replace item"
+          - "Issue refund"
+          - "Provide return label if needed"
+        prevention:
+          - "Review packaging methods"
+          - "Update shipping procedures if needed"
+
+fulfillment_center:
+  contact:
+    email: "admin@fulfilment4you.co.uk"
+  contact_reasons:
+    - "Packing errors"
+    - "Wrong items shipped"
+    - "Missing items"
+    - "Damaged product reports"
+  issue_template: |
+    Subject: Fulfillment Issue - Order #[Number]
+
+    Order Details:
+    - Order ID: [Number]
+    - Customer: [Name]
+    - Date: [Order Date]
+
+    Issue Description:
+    [Detailed description of the problem]
+
+    Required Action:
+    [Specific actions needed]
+
+    Supporting Information:
+    [Any relevant images or documentation]
+
+best_practices:
+  communication:
+    - "Respond promptly and professionally"
+    - "Show empathy and understanding"
+    - "Provide clear resolution steps"
+    - "Follow up after resolution"
+  
+  documentation:
+    - "Log all customer interactions"
+    - "Save all relevant images"
+    - "Record resolution details"
+    - "Track patterns for process improvement"
+
+escalation:
+  triggers:
+    - "Issue remains unresolved after standard process"
+    - "Customer is particularly distressed"
+    - "Situation requires policy exception"
+    - "Multiple issues with same order"
+    - "Chargeback cases"
+
+internal_processes:
+  reviews:
+    frequency: "Weekly"
+    day: "Monday"
+    focus:
+      - "Process improvement"
+      - "Pattern identification"
+
+ai_handling:
+  sentiment_detection:
+    high_priority:
+      - "distressed"
+      - "angry"
+      - "frustrated"
+      - "urgent"
+    
+  verification_required:
+    - "Order number"
+    - "Customer email"
+    - "Delivery address"
+    - "Tracking number"
+    
+  response_guidelines:
+    - "Always acknowledge the issue first"
+    - "Show empathy in responses"
+    - "Provide clear next steps"
+    - "Set realistic expectations"
+    
+  escalation_triggers:
+    - "Multiple contacts about same issue"
+    - "Mentions of legal action"
+    - "Health-related complaints"
+    - "Refund disputes"
+
+ai_response_templates:
+  initial_contact: |
+    Thank you for contacting us about {issue_type}.
+    I understand this must be {emotional_state} and I'm here to help.
+    Let me assist you with resolving this right away.
+    
+  information_request: |
+    To help resolve this quickly, could you please provide:
+    {required_information}
+    
+  resolution_confirmation: |
+    I've reviewed your case and here's what we'll do to resolve this:
+    {resolution_steps}
+    
+  escalation_notice: |
+    I understand this is a sensitive situation.
+    I'm escalating this to our specialist team who will contact you within {timeline}.
+    In the meantime, {immediate_actions} 

@@ -1,0 +1,408 @@
+metadata:
+  type: Support Document
+  category: Procedures
+  version: "2025"
+  last_updated: "2024-02-20"
+  priority: High
+
+overview: |
+  This document outlines the procedures for handling situations where information 
+  is missing, unclear, or requires human intervention, including AI confidence-based escalation.
+
+escalation_triggers:
+  confidence_based:
+    very_low:
+      threshold: "<50%"
+      action: "immediate_human_review"
+      priority: "high"
+      response_time: "30 minutes"
+      
+    low:
+      threshold: "50-69%"
+      action: "human_review_required"
+      priority: "medium"
+      response_time: "1 hour"
+      
+    medium:
+      threshold: "70-84%"
+      action: "approval_required"
+      priority: "normal"
+      response_time: "2 hours"
+      
+    high:
+      threshold: "85-100%"
+      action: "autonomous_with_monitoring"
+      priority: "low"
+      response_time: "4 hours"
+
+  situation_based:
+    health_safety:
+      priority: "immediate"
+      team: "customer_care"
+      response_time: "15 minutes"
+      
+    legal_compliance:
+      priority: "high"
+      team: "legal"
+      response_time: "1 hour"
+      
+    technical_issues:
+      priority: "medium"
+      team: "technical_support"
+      response_time: "2 hours"
+      
+    general_queries:
+      priority: "normal"
+      team: "customer_service"
+      response_time: "4 hours"
+
+assessment_process:
+  initial_evaluation:
+    ai_confidence:
+      check_score: true
+      verify_context: true
+      assess_risk: true
+      
+    customer_context:
+      order_history: true
+      previous_issues: true
+      satisfaction_score: true
+      
+    issue_severity:
+      impact_assessment: true
+      urgency_evaluation: true
+      business_risk: true
+
+  escalation_workflow:
+    low_confidence:
+      steps:
+        - "Log confidence score and factors"
+        - "Flag for human review"
+        - "Prepare context summary"
+        - "Suggest potential responses"
+        
+    medium_confidence:
+      steps:
+        - "Present AI response"
+        - "Request human approval"
+        - "Track modifications"
+        - "Update learning system"
+        
+    high_confidence:
+      steps:
+        - "Execute AI response"
+        - "Monitor outcome"
+        - "Record success metrics"
+        - "Feed into learning system"
+
+learning_system_integration:
+  data_collection:
+    capture_points:
+      - "Initial confidence score"
+      - "Human modifications"
+      - "Resolution success"
+      - "Customer satisfaction"
+      - "Response time"
+      
+    analysis_metrics:
+      - "Confidence accuracy"
+      - "Resolution effectiveness"
+      - "Learning opportunities"
+      - "Pattern recognition"
+
+  knowledge_enhancement:
+    update_triggers:
+      - "Repeated issues"
+      - "New scenarios"
+      - "Success patterns"
+      - "Failed attempts"
+      
+    improvement_areas:
+      - "Response templates"
+      - "Confidence scoring"
+      - "Escalation criteria"
+      - "Resolution paths"
+
+telegram_notification:
+  format:
+    high_confidence: |
+      🎫 Ticket #{ticket_id}
+      📊 Confidence: {score}%
+      ✅ AI Response Ready
+      
+      [Show full message format]
+      
+    medium_confidence: |
+      🎫 Ticket #{ticket_id}
+      📊 Confidence: {score}%
+      👀 Review Required
+      
+      [Show full message format]
+      
+    low_confidence: |
+      🎫 Ticket #{ticket_id}
+      📊 Confidence: {score}%
+      ⚠️ Human Intervention Needed
+      
+      [Show full message format]
+
+response_tracking:
+  metrics:
+    - "Resolution time"
+    - "Escalation level"
+    - "Customer satisfaction"
+    - "AI confidence accuracy"
+    - "Learning points"
+    
+  success_criteria:
+    - "First response time"
+    - "Resolution accuracy"
+    - "Customer feedback"
+    - "Process compliance"
+    - "Learning implementation"
+
+continuous_improvement:
+  review_schedule:
+    daily:
+      - "Response times"
+      - "Escalation patterns"
+      - "Confidence accuracy"
+      
+    weekly:
+      - "Success rates"
+      - "Learning implementation"
+      - "Process adjustments"
+      
+    monthly:
+      - "Policy updates"
+      - "System enhancements"
+      - "Training needs"
+
+documentation_requirements:
+  for_each_case:
+    - "Initial confidence score"
+    - "Escalation reason"
+    - "Resolution path"
+    - "Learning outcomes"
+    - "System improvements"
+
+information_gaps:
+  missing_info_process:
+    steps:
+      - "First check all knowledge base documents thoroughly"
+      - "If information cannot be found:"
+      actions:
+        - "Inform the customer that you need to verify the information"
+        - "Use the telegram notification system to request clarification"
+        - "Provide customer with interim response using templates"
+
+  assessment_process:
+    check_sequence:
+      - section: "Product documentation"
+      - section: "Policy documents"
+      - section: "Support guides"
+      - section: "FAQ and troubleshooting"
+    additional_checks:
+      - "Check Project Memory Bank (cline_docs/) if technical details needed"
+      - "Evaluate urgency and customer impact"
+      - "Determine appropriate escalation path"
+
+  self_update_protocol:
+    new_information:
+      steps:
+        - "Verify information accuracy"
+        - "Identify appropriate document location"
+        - "Draft update in correct format"
+        - "Request team review via Telegram"
+    post_approval:
+      steps:
+        - "Update relevant documentation"
+        - "Log changes in changelog"
+        - "Notify team of update"
+
+telegram_notifications:
+  triggers:
+    - "Missing product information"
+    - "Unclear policy details"
+    - "New scenarios not covered in documentation"
+    - "Potential documentation updates needed"
+    - "System or process questions"
+  
+  template: |
+    🔔 Information Request
+
+    Topic: [Brief description]
+    Priority: [High/Medium/Low]
+    Customer Impact: [Yes/No]
+    Waiting Customer: [Yes/No]
+
+    Details:
+    [Specific information needed]
+
+    Context:
+    [Relevant background information]
+
+    Suggested Update Location:
+    [Specific document and section]
+
+documentation_updates:
+  process:
+    steps:
+      - "Wait for team confirmation"
+      - "Update relevant documentation"
+      - "Respond to customer"
+      - "Log update in changelog"
+    
+    documentation_tasks:
+      - "Add new information"
+      - "Update lastUpdated date"
+      - "Maintain formatting"
+      - "Cross-reference if needed"
+  
+  update_template: |
+    ---
+    Update Log:
+    Date: [Date]
+    Document: [Document name]
+    Section: [Section name]
+    Change: [Description of update]
+    Approved by: [Team member]
+    ---
+
+priority_levels:
+  high:
+    criteria:
+      - "Customer waiting for response"
+      - "Order-related issues"
+      - "Safety concerns"
+      - "Time-sensitive matters"
+  
+  medium:
+    criteria:
+      - "Product information updates"
+      - "Policy clarifications"
+      - "Process improvements"
+      - "Documentation enhancements"
+  
+  low:
+    criteria:
+      - "General information additions"
+      - "Style improvements"
+      - "Optional enhancements"
+
+response_times:
+  customer_communication:
+    acknowledge: "immediately"
+    interim_response: "if needed"
+    full_response: "within 1 business day"
+    follow_up: "after resolution"
+  
+  internal_updates:
+    high_priority: "Same day"
+    medium_priority: "Within 3 days"
+    low_priority: "Within 1 week"
+
+documentation_maintenance:
+  regular_reviews:
+    monthly:
+      - "Audit of common queries"
+    quarterly:
+      - "Policy reviews"
+    ongoing:
+      - "Update documentation proactively"
+      - "Remove outdated information"
+  
+  quality_control:
+    - "Verify information accuracy"
+    - "Maintain consistent formatting"
+    - "Ensure cross-references"
+    - "Update related documents"
+
+team_collaboration:
+  communication_channels:
+    urgent: "Telegram"
+    non_urgent: "Email"
+    regular: "Review meetings"
+    training: "Documentation workshops"
+  
+  roles:
+    customer_service: "Initial contact"
+    product_team: "Product information"
+    management: "Policy decisions"
+    technical_team: "System updates"
+
+best_practices:
+  ai_assistant:
+    - "Always check all documentation thoroughly"
+    - "Be transparent about needing to verify information"
+    - "Provide interim responses when needed"
+    - "Follow up consistently"
+    - "Maintain professional tone"
+    - "Update documentation after team approval"
+  
+  team:
+    - "Respond promptly to information requests"
+    - "Provide clear, complete information"
+    - "Review and approve updates"
+    - "Maintain documentation quality"
+    - "Monitor common queries"
+
+contact_information:
+  support_team:
+    telegram: "[Channel ID]"
+    email: "help@beardandbones.co.uk"
+    hours: "Monday to Friday, 9 AM - 5 PM GMT"
+  
+  emergency_contacts:
+    urgent_issues: "[Contact details]"
+    technical_support: "[Contact details]"
+    management: "[Contact details]"
+
+ai_handling:
+  verification_steps:
+    - "Check all knowledge base sections systematically"
+    - "Document any missing information"
+    - "Use appropriate escalation channel"
+    - "Provide interim response to customer"
+  
+  response_templates:
+    interim_response: |
+      Dear {customer_name},
+
+      Thank you for your inquiry about {topic}. To ensure I provide you with the most accurate information, 
+      I need to verify some details with our team. I'll get back to you within one business day with a complete response.
+
+      Best regards,
+      Beard & Bones Customer Care
+    
+    escalation_notification: |
+      🔔 Information Request
+      Topic: {topic}
+      Priority: {priority_level}
+      Customer Impact: {yes_no}
+      Waiting Customer: {yes_no}
+
+      Details:
+      {specific_info_needed}
+
+      Context:
+      {background_info}
+
+  priority_assessment:
+    high_triggers:
+      - "Customer waiting"
+      - "Order issues"
+      - "Safety concerns"
+    
+    response_times:
+      high: "Same day"
+      medium: "3 days"
+      low: "1 week"
+
+review_schedule:
+  frequency: "quarterly"
+  focus_areas:
+    - "Process effectiveness"
+    - "Response times"
+    - "Documentation quality"
+    - "Team feedback" 

@@ -1,0 +1,72 @@
+{
+  "email": {
+    "monitoring": {
+      "address": "help@beardandbones.co.uk",
+      "check_frequency": "real-time",
+      "protocols": {
+        "imap": {
+          "host": "imap.gmail.com",
+          "port": 993,
+          "secure": true
+        },
+        "smtp": {
+          "host": "smtp.gmail.com",
+          "port": 465,
+          "secure": true
+        }
+      },
+      "oauth": {
+        "redirect_uris": [
+          "http://localhost:3000/api/auth/callback/google",
+          "https://beardandbonesai.com/api/auth/callback/google"
+        ],
+        "javascript_origins": [
+          "http://localhost:3000",
+          "https://beardandbonesai.com"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "customer_service": {
+      "email": "help@beardandbones.co.uk",
+      "hours": "Monday to Friday, 9 AM - 5 PM GMT",
+      "response_time": "Within 1 business day"
+    },
+    "support": {
+      "email": "help@beardandbones.co.uk",
+      "telegram": "[Channel ID]",
+      "emergency": "[Contact details]"
+    },
+    "technical": {
+      "email": "[Contact details]",
+      "emergency": "[Contact details]"
+    }
+  },
+  "monitoring": {
+    "email_inbox": "help@beardandbones.co.uk",
+    "tracking_api": "Royal Mail API",
+    "notification_channel": "Telegram"
+  },
+  "automation": {
+    "check_frequency": "daily",
+    "status_updates": "real-time",
+    "notification_delay": "1 hour"
+  },
+  "policies": {
+    "return_window": "30 days",
+    "free_shipping_threshold": "£40",
+    "product_use_period": "12 months",
+    "shelf_life": "24 months"
+  },
+  "system": {
+    "version": "2025",
+    "last_updated": "2024-01-30",
+    "review_schedule": {
+      "policies": "quarterly",
+      "products": "as needed",
+      "support": "monthly",
+      "templates": "quarterly"
+    }
+  }
+}

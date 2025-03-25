@@ -1,0 +1,368 @@
+products:
+  metadata:
+    version: "2025"
+    last_updated: "2024-02-20"
+    category: "Product Information"
+    priority: "High"
+
+  beard_oil:
+    name: "Beard Oil"
+    variants:
+      - name: "60ml Beard Oil"
+        size: "60ml"
+        packaging: "Matte Black Glass Skull Bottle with black pipette"
+        formula: "2025 Nut-Free Formula"
+        price: 15.00
+    
+    ingredients:
+      - "Jojoba Oil"
+      - "Meadowfoam Seed Oil"
+      - "Squalane"
+      - "Coco-Caprylate"
+      - "Castor Oil"
+      - "Sea Buckthorn Oil"
+      - "Buriti Oil"
+      - "Broccoli Seed Oil"
+      - "Fragrance Oil"
+      - "Tocopherol"
+      - "Bisabolol"
+      - "Panthenol"
+    
+    scents:
+      billion:
+        description: "Top notes of grapefruit, blood orange, and rose, spiced with cinnamon and mint. Base notes include patchouli, amber, and leather"
+      invictors:
+        description: "Fresh grapefruit, bay leaf, and Hedione jasmine, with a woody base of patchouli, oak moss, and ambergris"
+      kreed:
+        description: "Primary notes include pineapple, bergamot, oakmoss, vanilla, and musk"
+      savage:
+        description: "Primary notes of bergamot, Ambroxan, lavender, vetiver, and patchouli"
+      woodland_elixir:
+        description: "Top notes are Cherry, Pear, Ginger; middle notes are Sage and Basil; base notes are Vanilla, Amber and Patchouli"
+      the_boss:
+        description: "Top notes are Apple, Plum, Bergamot, Lemon, Oakmoss and Geranium; middle notes are Cinnamon, Mahogany and Carnation; base notes are Vanilla, Sandalwood, Cedar, Vetiver and Olive Tree"
+    
+    key_benefits:
+      hydration:
+        title: "Hydration"
+        description: "Locks in moisture for softness"
+      nourishment:
+        title: "Nourishment"
+        description: "Promotes healthier growth"
+      anti_itch:
+        title: "Prevents Itchiness"
+        description: "Soothes dry skin beneath the beard"
+      styling:
+        title: "Styling"
+        description: "Adds a polished look with a subtle shine"
+      packaging:
+        title: "Unique Packaging"
+        description: "Iconic Skull Bottle for a standout appeal"
+    
+    usage:
+      steps:
+        - "Wash and towel-dry your beard"
+        - "Dispense 3–5 drops (adjust for beard length) into your palm"
+        - "Rub your hands together to warm the oil"
+        - "Massage evenly into your beard from roots to tips"
+        - "Comb through for a groomed finish"
+      frequency: "Daily use recommended"
+      amount_guide:
+        short_beard: "3-5 drops"
+        long_beard: "5-7 drops"
+    
+    troubleshooting:
+      too_heavy:
+        symptoms:
+          - "Beard feels greasy"
+          - "Oil doesn't absorb well"
+          - "Excessive shine"
+        solutions:
+          - "Reduce amount used (start with 2-3 drops)"
+          - "Apply to damp, not wet beard"
+          - "Focus on even distribution"
+          - "Use after thoroughly drying beard"
+          - "Massage thoroughly into skin"
+      not_enough_moisture:
+        symptoms:
+          - "Beard still feels dry"
+          - "Tangles persist"
+          - "Skin feels itchy"
+        solutions:
+          - "Increase amount slightly"
+          - "Apply to damp beard"
+          - "Use twice daily if needed"
+          - "Combine with Beard Butter"
+          - "Ensure thorough application"
+      scent_issues:
+        symptoms:
+          - "Scent too strong/weak"
+          - "Scent doesn't last"
+          - "Unexpected fragrance"
+        solutions:
+          - "Adjust amount used"
+          - "Store properly (away from heat/light)"
+          - "Check product age"
+          - "Try different application method"
+          - "Consider Sample Kit for alternatives"
+    
+    storage:
+      guidelines:
+        - "Keep at room temperature"
+        - "Avoid direct sunlight"
+        - "Secure caps tightly"
+        - "Store upright"
+        - "Keep away from moisture"
+      shelf_life:
+        optimal_use: "12 months from delivery"
+        total_life: "24 months from manufacture"
+    
+    safety:
+      warnings:
+        - "External use only"
+        - "Avoid eye contact"
+        - "Keep away from children"
+        - "Don't ingest"
+        - "Don't use on broken skin"
+      patch_test:
+        steps:
+          - "Apply small amount to inner arm"
+          - "Wait 24 hours"
+          - "Check for reactions"
+          - "Discontinue use if irritation occurs"
+          - "Contact us with concerns"
+
+  beard_butter:
+    name: "Beard Butter"
+    variants:
+      - name: "50ml Beard Butter"
+        size: "50ml"
+        packaging: "Matte Black Glass Jar"
+        formula: "2025 Formula"
+        price: 10.00
+    
+    ingredients:
+      - "Butyrospermum Parkii (Shea) Butter"
+      - "Theobroma Cacao (Cocoa) Seed Butter"
+      - "Caprylic/Capric Triglyceride"
+      - "Meadowfoam Seed Oil"
+      - "Jojoba Seed Oil"
+      - "Cera Alba (Beeswax)"
+      - "Cetyl Alcohol"
+      - "Parfum (Fragrance)"
+      - "Tocopherol (Vitamin E)"
+      - "Cellulose Gum"
+    
+    scents:
+      kreed:
+        description: "Primary notes include pineapple, bergamot, oakmoss, vanilla, and musk"
+      savage:
+        description: "Primary notes of bergamot, Ambroxan, lavender, vetiver, and patchouli"
+    
+    key_benefits:
+      styling:
+        title: "Styling Control"
+        description: "Provides natural hold and shape"
+      conditioning:
+        title: "Deep Conditioning"
+        description: "Intensive nourishment for beard hair"
+      softening:
+        title: "Softening"
+        description: "Makes beard hair softer and more manageable"
+      moisturizing:
+        title: "Moisturizing"
+        description: "Hydrates both beard and skin underneath"
+    
+    usage:
+      steps:
+        - "Start with a clean, towel-dried beard"
+        - "Scoop a small amount with fingertip"
+        - "Warm between palms until melted"
+        - "Work thoroughly through beard"
+        - "Style as desired"
+      frequency: "Daily use or as needed"
+    
+    troubleshooting:
+      texture_problems:
+        symptoms:
+          - "Separation"
+          - "Graininess"
+          - "Inconsistent texture"
+        solutions:
+          - "Mix well before use"
+          - "Store at room temperature"
+          - "Check product age"
+          - "Ensure lid is tight"
+          - "Avoid temperature fluctuations"
+      absorption_issues:
+        symptoms:
+          - "Sits on surface"
+          - "Feels greasy"
+          - "Doesn't penetrate"
+        solutions:
+          - "Apply to damp beard"
+          - "Use less product"
+          - "Massage thoroughly"
+          - "Apply in sections"
+          - "Ensure beard is clean"
+    
+    storage:
+      guidelines:
+        - "Store at room temperature"
+        - "Keep container sealed"
+        - "Avoid direct sunlight"
+        - "Keep away from moisture"
+        - "Use clean, dry hands"
+      shelf_life:
+        optimal_use: "12 months from delivery"
+        total_life: "24 months from manufacture"
+
+  beard_balm:
+    name: "Beard Balm"
+    variants:
+      - name: "50ml Beard Balm"
+        size: "50ml"
+        packaging: "Matte Black Metal Tin"
+        formula: "V3 Formula (2025)"
+        price: 10.00
+    
+    ingredients:
+      - "Cera alba (Beeswax)"
+      - "Oryza Sativa Bran Wax"
+      - "Butyrospermum parkii (Shea) Butter"
+      - "Simmondsia chinensis (Jojoba) Seed Oil"
+      - "Vitis vinifera (Grape) Seed Oil"
+      - "Caprylic/Capric Triglyceride"
+      - "Fragrance Oil"
+      - "Cetyl Alcohol"
+      - "Cellulose Gum"
+      - "Panthenol"
+      - "Hydrolyzed Keratin"
+      - "d-Biotin"
+      - "Copper Tripeptide-1"
+      - "Myristoyl Pentapeptide-17"
+    
+    scents:
+      billion:
+        description: "Top notes of grapefruit, blood orange, and rose, spiced with cinnamon and mint. Base notes include patchouli, amber, and leather"
+      invictors:
+        description: "Fresh grapefruit, bay leaf, and Hedione jasmine, with a woody base of patchouli, oak moss, and ambergris"
+      kreed:
+        description: "Primary notes include pineapple, bergamot, oakmoss, vanilla, and musk"
+      savage:
+        description: "Primary notes of bergamot, Ambroxan, lavender, vetiver, and patchouli"
+      woodland_elixir:
+        description: "Top notes are Cherry, Pear, Ginger; middle notes are Sage and Basil; base notes are Vanilla, Amber and Patchouli"
+      the_boss:
+        description: "Top notes are Apple, Plum, Bergamot, Lemon, Oakmoss and Geranium; middle notes are Cinnamon, Mahogany and Carnation; base notes are Vanilla, Sandalwood, Cedar, Vetiver and Olive Tree"
+    
+    key_benefits:
+      hold:
+        title: "Strong Hold"
+        description: "Provides firm hold for styling"
+      protection:
+        title: "Protection"
+        description: "Creates protective layer for beard hair"
+      shaping:
+        title: "Shaping"
+        description: "Excellent for styling and taming flyaways"
+      nourishing:
+        title: "Nourishing"
+        description: "Contains natural butters and oils for beard health"
+    
+    usage:
+      steps:
+        - "Start with clean, dry beard"
+        - "Scrape small amount with thumbnail"
+        - "Warm between palms until melted"
+        - "Apply evenly through beard"
+        - "Shape and style as desired"
+      frequency: "Daily use or as needed for styling"
+    
+    troubleshooting:
+      too_hard:
+        symptoms:
+          - "Difficult to scoop"
+          - "Won't spread easily"
+          - "Clumps in beard"
+        solutions:
+          - "Warm between palms longer"
+          - "Store at room temperature"
+          - "Use smaller amounts"
+          - "Break up with thumbnail first"
+          - "Apply to slightly damp beard"
+      too_soft:
+        symptoms:
+          - "Overly greasy"
+          - "Melts too quickly"
+          - "Lacks hold"
+        solutions:
+          - "Store in cooler place"
+          - "Use less product"
+          - "Apply to dry beard"
+          - "Check room temperature"
+          - "Verify product freshness"
+      application_issues:
+        symptoms:
+          - "Uneven distribution"
+          - "White residue"
+          - "Product buildup"
+        solutions:
+          - "Warm thoroughly before applying"
+          - "Use smaller amounts"
+          - "Apply to sections"
+          - "Comb through thoroughly"
+          - "Clean beard properly before use"
+    
+    storage:
+      guidelines:
+        - "Store at room temperature"
+        - "Keep container sealed"
+        - "Avoid direct sunlight"
+        - "Keep away from moisture"
+        - "Use clean, dry hands"
+      shelf_life:
+        optimal_use: "12 months from delivery"
+        total_life: "24 months from manufacture"
+
+  beard_oil_sample_kit:
+    name: "Beard Oil Sample Kit"
+    variants:
+      - name: "Sample Kit"
+        size: "6 x 10ml"
+        packaging: "Magnetic luxury box with foam inserts, 10ml black glass bottles with black pipettes"
+        formula: "2025 Nut-Free Formula"
+        price: 30.00
+    
+    contents:
+      - "Billion"
+      - "Invictors"
+      - "Kreed"
+      - "Savage"
+      - "Woodland Elixir"
+      - "The Boss"
+    
+    key_benefits:
+      discovery:
+        title: "Discover Your Scent"
+        description: "Try all six signature scents before committing"
+      travel:
+        title: "Travel-Friendly"
+        description: "Perfect size for travel or gym bag"
+      gift:
+        title: "Gift-Ready"
+        description: "Luxurious packaging makes it an ideal gift"
+      value:
+        title: "Value"
+        description: "Experience multiple scents at an accessible price point"
+    
+    usage:
+      steps:
+        - "Open the bottle using the pipette for controlled application"
+        - "Dispense 2–4 drops of oil into your palm"
+        - "Rub hands together to warm the oil"
+        - "Apply evenly to your beard, ensuring coverage from roots to tips"
+        - "Comb through for a well-groomed finish"
+      amount_guide:
+        per_use: "2-4 drops"
+        uses_per_bottle: "15-20 applications" 

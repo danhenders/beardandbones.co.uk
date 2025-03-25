@@ -1,0 +1,129 @@
+<style> 
+    {% if section.settings.bg_color %}
+        .line-slider-section .line-section-wrap {
+            background: {{section.settings.bg_color}};
+        }
+    {% endif %}
+    .line-slider-section .line-slider-wrap {
+        display: grid;
+        width: 100%;
+        padding: 25px 0;
+        overflow: hidden;
+    }
+    .line-slider-section .line-slider-wrap .line-slider {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      width: 100%;
+   }
+  .line-slider-section .item-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .line-slider-section .item-wrap {
+    margin: 0 55px;
+  }
+  .line-slider-section .item-wrap {
+    height: 36px;
+  }
+  .line-slider-section .item-wrap span {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 800;
+    text-transform: uppercase;
+    {% if section.settings.text_color %}
+      color: {{section.settings.text_color}};
+    {% else %}
+      color: #fff;
+    {% endif %}
+  }
+  @media only screen and (max-width:750px){
+    .line-slider-section .line-slider-wrap {
+        padding: 15px 0;
+    }
+    .line-slider-section .item-wrap {
+        margin: 0 15px;
+    }
+  }
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+<div class="line-section-wrap">
+  <div class="line-slider-wrap">
+      <div class="line-slider">
+        {% for block in section.blocks %}
+          <div class="item-wrap">
+            <div class="item">
+              <span>{{ block.settings.text }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Marquee Text",
+    "class":"line-slider-section",
+    "max_blocks": 20,
+    "settings": [
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Text Here"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Marquee Text",
+        "blocks": [
+          {
+            "type": "text"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

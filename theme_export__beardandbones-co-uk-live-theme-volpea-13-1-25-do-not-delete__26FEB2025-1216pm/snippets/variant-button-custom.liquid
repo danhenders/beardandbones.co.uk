@@ -1,0 +1,491 @@
+{%- assign swatch_file_extension = 'png' -%}
+<style>
+  .center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 100%; */
+  /* transform: translateY(50%); */
+}
+
+.container1 {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  display: block;
+  min-width: 231.5px;
+  width: 100% !important;
+  /* max-width: 483px; */
+}
+
+/* the code below is for the dropdown heading */
+.setting-description {
+  background-color: #1c2028; 
+  border-radius: 15px 15px 0px 0px;
+  
+  min-width: 231.5px;
+  width: 100% !important;
+  max-width: 383px;
+}
+
+h10 {
+  font-size: 12px;
+  margin-left: 5px !important;
+  letter-spacing: 0.8px;
+  font-family: Arial !important;
+}
+
+.setting-description-text {
+  padding-top: 18px !important;
+  color: #81828b;
+  font-family: Gilroy-Regular !important;
+}
+
+/* the code below is for the dropdown menu */
+.wrapper-dropdown {
+  position: relative;
+    display: flex;
+  justify-content: space-between;
+  align-items:center;
+    min-width: 231.5px;
+    width: 100%;
+    max-width: 405px;
+    padding: 18px 0;
+    min-height: 44px;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid #dedede;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 20px;
+    font-family: Arial;
+}
+
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.arrow {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+  rotate: 180deg;
+}
+
+.selected-display {
+  margin-left: 20px;
+}
+
+
+
+.wrapper-dropdown::before {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  margin-top: -2px;
+
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+}
+
+.wrapper-dropdown .dropdown {
+  transition: 0.3s;
+
+  position: absolute;
+  top: 0%;
+  right: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  z-index: 99;
+
+  border-radius: 15px;
+  box-shadow: inherit;
+  background: inherit;
+
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper-dropdown .dropdown li {
+  /* overflow: hidden; */
+    /* border-bottom: 1px solid #d3d3d3; */
+    box-shadow: none;
+    margin: 0;
+    /* padding: 18px 45px 18px 18px; */
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+}
+
+.wrapper-dropdown .dropdown li:last-child {
+  border-bottom: none;
+}
+
+.dropdown {
+  /* padding: 0.5rem !important; */
+}
+
+.wrapper-dropdown .dropdown li:hover {
+  /* background-color: rgb(35, 40, 49); */
+  border-radius: 10px;
+}
+
+.wrapper-dropdown.active .dropdown {
+  opacity: 1;
+  visibility: visible;
+
+  border-radius: 15px;
+}
+ .dd-list.dropdown span.badge-popular {
+    display: none;
+}
+  .selected-display  .drop-item {
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.dd-list .drop-item {
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    padding: 18px 45px 18px 18px;
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    /* border-radius: 5px; */
+    position: relative;
+    cursor: pointer;
+    margin-bottom: -1px;
+  min-height: 74px;
+}
+  .badge-popular {
+    position: absolute;
+    left: 0px;
+    top: -27px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: #fff;
+    background: #75b1bd;
+    padding: 2px 6px;
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+    border-radius: 2px;
+    letter-spacing: 0;
+}
+.variant-icon {
+    display: flex;
+  aspect-ratio:1/1;
+  width: 30px;
+    height: 30px;
+}
+.variant-icon img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+  .variant-value {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #fff;
+    letter-spacing: 0;
+        min-width: 140px;
+}
+  .variant-note {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 120%;
+    color: #fff;
+    letter-spacing: 0;
+}
+li.item.active .drop-item {
+    background: #171717;
+}
+  .wrapper-dropdown.active {
+    border: none;
+}
+  .wrapper-dropdown.active span#destination {
+    display: none;
+}
+li.item.active .drop-item {
+    background: #171717;
+}
+  .dd-list .drop-item{
+    background: #171717;
+  }
+</style>
+{%- capture size_chart_title -%}
+  {{ 'products.general.size_chart' | t }} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-size-chart" viewBox="0 0 64 64"><defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M22.39 33.53c-7.46 0-13.5-3.9-13.5-8.72s6-8.72 13.5-8.72 13.5 3.9 13.5 8.72a12 12 0 0 1-.22 1.73"/><ellipse cx="22.39" cy="24.81" rx="3.28" ry="2.12"/><path class="a" d="M8.89 24.81V38.5c0 7.9 6.4 9.41 14.3 9.41h31.92V33.53H22.39M46.78 33.53v7.44M38.65 33.53v7.44M30.52 33.53v7.44M22.39 33.53v7.44"/></svg>
+{%- endcapture -%}
+
+{%- liquid
+  assign is_size = false
+  assign size_trigger = 'products.general.size_trigger' | t | downcase
+  assign downcased_option = option.name | downcase
+
+  if downcased_option contains size_trigger
+    assign is_size = true
+  endif
+-%}
+
+<div class="variant-wrapper js" data-type="button">
+  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+    for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+    {{ option.name }}
+    {%- if connect_to_sizechart and is_size -%}
+      <span class="variant__label-info">
+        &mdash;
+        {%- render
+          'tool-tip-trigger',
+          title: size_chart_title,
+          content: section.blocks[sizechart_index].settings.size_chart.content,
+          context: 'size-chart'
+        -%}
+      </span>
+    {%- endif -%}
+    {%- if is_color -%}
+      <span class="variant__label-info">
+        &mdash;
+        <span
+          data-variant-color-label
+          data-index="{{ forloop.index0 }}"
+          data-option-index="{{ color_option_index }}">
+          {{ option.selected_value }}
+        </span>
+      </span>
+    {%- endif -%}
+  </label>
+  {%- assign option_index = forloop.index -%}
+  <div class="center1" {% if option_index != 1 %} style="display:none;" {% endif %}>
+    <div class="container1">
+      <div class="wrapper-dropdown" id="dropdown">
+        <span class="selected-display" id="destination">
+          {%- for value in option.values -%}
+              {% for variant1 in product.variants %}
+                {%- if variant1.title contains value -%}
+                  <div class="drop-item" for="{{ value }}">
+                    {% if variant1.metafields.custom.tag != blank %}<span class="badge-popular">{{ variant1.metafields.custom.tag }}</span>{% endif %}
+                    {% if variant1.metafields.custom.icon != blank %}<span class="variant-icon"><img src="{{ variant1.metafields.custom.icon.value | img_url:"master" }}"></span>{% endif %}
+                    <span class="variant-value">{{ value }} </span>
+                    {% if variant1.metafields.custom.short_description != blank %}<span class="variant-note">{{ variant1.metafields.custom.short_description }}</span>{% endif %}
+                    <span class="long-detail-meta visually-hidden">{% if variant1.metafields.custom.long_detail != blank %}{{ variant1.metafields.custom.long_detail | metafield_tag }}{% endif %}</span>
+                  </div>
+                {%- endif -%}
+                {% break %}
+              {% endfor %}  
+            {% break %}
+          {% endfor %}
+        </span>
+        <svg class="arrow" id="drp-arrow" width="44" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all ml-auto rotate-180">
+          <path d="M7 14.5l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <ul class="dropdown custom-variant-dropdown dd-list">
+          {% assign variant_titles = '' %}
+          {%- for value in option.values -%}
+             
+          <li class="item {% if forloop.index == 1 %}active{% endif %}">
+              {% for variant1 in product.variants %}
+                {%- if variant1.title contains value and variant_titles != value -%}
+                  {% assign variant_titles = value %}
+                  <div class="drop-item" data-optiond="{{ option.name }}" data-variant-title="{{ value }}"  data-variant-option-id="{{ variant1.id }}"  {% if forloop.index == 1 %}style="border-radius: 5px 5px 0 0;"{% endif %} {% if forloop.last  %}style="border-radius: 0 0 5px 5px;"{% endif %}>
+                    {% if variant1.metafields.custom.tag != blank %}<span class="badge-popular">{{ variant1.metafields.custom.tag }}</span>{% endif %}
+                    {% if variant1.metafields.custom.icon != blank %}<span class="variant-icon"><img src="{{ variant1.metafields.custom.icon.value | img_url:"master" }}"></span>{% endif %}
+                    <span class="variant-value">{{ value }}</span>
+                    {% if variant1.metafields.custom.short_description != blank %}<span class="variant-note">{{ variant1.metafields.custom.short_description }}</span>{% endif %}
+                     <span class="long-detail-meta visually-hidden">{% if variant1.metafields.custom.long_detail != blank %}{{ variant1.metafields.custom.long_detail | metafield_tag }}{% endif %}</span>
+                  </div>
+                {%- endif -%}
+              {% endfor %}  
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {%- for value in option.values -%}
+      {% for variant1 in product.variants %}
+        {%- if variant1.title contains value -%}
+            <span class="long-detail" data-details="{{ option.name }}" {% if option_index != 1 %} style="display:none;" {% endif %}>{% if variant1.metafields.custom.long_detail != blank %}{{ variant1.metafields.custom.long_detail | metafield_tag }}{% endif %}</span>
+        {%- endif -%}
+        {% break %}
+      {% endfor %}  
+    {% break %}
+  {% endfor %}
+  <fieldset class="variant-input-wrap variant-{{ option_index }}" {% if option_index == 1 %} style="display:none;" {% endif %}
+    name="{{ option.name }}"
+    data-index="option{{ option_index }}"
+    data-handle="{{ option.name | handleize }}"
+    id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+    <legend class="hide">{{ option.name }}</legend>
+    {%- for value in option.values -%}
+      {%- liquid
+        assign product_available = true
+        if product.options.size == 1
+          assign product_available = product.variants[forloop.index0].available
+        endif
+      -%}
+      <div
+        class="variant-input"
+        data-index="option{{ option_index }}"
+        data-value="{{ value | escape }}">
+        <input type="radio"
+          form="{{ form_id }}"
+          {% if option.selected_value == value %} checked="checked"{% endif %}
+          value="{{ value | escape }}"
+          data-index="option{{ option_index }}"
+          name="{{ option.name }}"
+          data-variant-input
+          class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}"
+          {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
+          {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
+          id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
+        {%- if is_color -%}
+          {%- liquid
+            assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+            assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+            assign color_swatch_fallback = value | split: ' ' | last | handle
+          -%}
+          <label variant-link="{{ value }}"
+            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+            class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+          >
+            {{ value | escape }}
+          </label>
+        {%- else -%}
+          <label
+            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+            class="variant__button-label{% unless product_available %} disabled{% endunless %}">{{ value | escape }}</label>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </fieldset>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    const selectedAll = document.querySelectorAll(".wrapper-dropdown");
+
+selectedAll.forEach((selected) => {
+  const optionsContainer = selected.children[2];
+  const optionsList = selected.querySelectorAll("div.wrapper-dropdown li");
+
+  selected.addEventListener("click", () => {
+    let arrow = selected.children[1];
+
+    if (selected.classList.contains("active")) { 
+      
+      handleDropdown(selected, arrow, false);
+    } else {
+      let currentActive = document.querySelector(".wrapper-dropdown.active");
+
+      if (currentActive) {
+        let anotherArrow = currentActive.children[1];
+        handleDropdown(currentActive, anotherArrow, false);
+      }
+
+      handleDropdown(selected, arrow, true);
+    }
+  });
+
+  // update the display of the dropdown
+  for (let o of optionsList) {
+    o.addEventListener("click", () => {
+      selected.querySelector(".selected-display").innerHTML = o.innerHTML;
+      $('.item').removeClass('active');
+      o.classList.toggle('active');
+      var optionName = o.querySelector('.drop-item').getAttribute('data-optiond');
+      var selected_cVariant = o.querySelector('.drop-item').getAttribute('data-variant-title'); 
+      // var long_detail = o.querySelector('.long-detail-meta').getAttribute('data-detail');
+      // console.log(o.querySelector('.long-detail-meta').innerHTML , optionName);
+      document.querySelector('[data-details="'+optionName+'"]').innerHTML = o.querySelector('.long-detail-meta').innerHTML;
+      setTimeout(
+          function() 
+          {
+            $('.variant-input[data-value="'+selected_cVariant+'"] .variant__button-label').click();
+          }, 
+       500);
+    });
+  }
+});
+
+// check if anything else ofther than the dropdown is clicked
+window.addEventListener("click", function (e) {
+  if (e.target.closest(".wrapper-dropdown") === null) {
+    closeAllDropdowns();
+  }
+});
+
+// close all the dropdowns
+function closeAllDropdowns() {
+  const selectedAll = document.querySelectorAll(".wrapper-dropdown");
+  selectedAll.forEach((selected) => {
+    const optionsContainer = selected.children[2];
+    let arrow = selected.children[1];
+
+    handleDropdown(selected, arrow, false);
+  });
+}
+
+// open all the dropdowns
+function handleDropdown(dropdown, arrow, open) {
+  if (open) {
+    arrow.classList.add("rotated");
+    dropdown.classList.add("active");
+  } else {
+    arrow.classList.remove("rotated");
+    dropdown.classList.remove("active");
+  }
+}
+// $('.item').on('click',function () {
+//     $('.item').removeClass('active');
+//     $(this).addClass('active');
+//     var selected_cVariant = $('.drop-item', this).attr('data-variant-title'); console.log(selected_cVariant);
+//     $('.variant-input[data-value="'+selected_cVariant+'"] .variant__button-label').click();
+//     $('#drp-arrow').removeClass('rotated');
+//     $('#dropdown').removeClass('active');
+// });
+</script>

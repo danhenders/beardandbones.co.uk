@@ -1,0 +1,109 @@
+{% comment %}
+  custom-image-section.liquid
+  This section displays one desktop image, one mobile image, and allows up to one block of text.
+{% endcomment %}
+
+<section id="custom-image-section" class="custom-image-section">
+  <div class="custom-image-section__wrapper">
+    <picture>
+      <!-- Desktop source -->
+      <source
+        media="(min-width: 768px)"
+        srcset="{{ section.settings.desktop_image | img_url: '1464x650' }}"
+      >
+      
+      <!-- Mobile source -->
+      <source
+        media="(max-width: 767px)"
+        srcset="{{ section.settings.mobile_image | img_url: '600x450' }}"
+      >
+      
+      <!-- Fallback image (in case neither source applies or JavaScript is disabled) -->
+      <img
+        src="{{ section.settings.desktop_image | img_url: '1464x650' }}"
+        alt="{{ section.settings.section_alt_text }}"
+      >
+    </picture>
+    
+    {% if section.blocks.size > 0 %}
+      <div class="custom-image-section__blocks">
+        {% for block in section.blocks %}
+          {% if block.type == 'text_block' %}
+            <div class="custom-image-section__block-text">
+              {{ block.settings.block_text }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Image Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image (1464 x 650)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image (600 x 450)"
+    },
+    {
+      "type": "text",
+      "id": "section_alt_text",
+      "label": "Alt Text for SEO",
+      "default": "Custom Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_text",
+          "label": "Block Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 1,
+  "presets": [
+    {
+      "name": "Custom Image Section",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.custom-image-section__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  /* Add any additional styling you like here */
+}
+
+.custom-image-section__wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: style the text block area */
+.custom-image-section__blocks {
+  margin-top: 20px;
+  text-align: center; /* or left/right, whatever fits your design */
+}
+
+.custom-image-section__block-text {
+  font-size: 1rem;
+  color: #333;
+}
+{% endstylesheet %}

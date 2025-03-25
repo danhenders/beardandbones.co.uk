@@ -1,0 +1,376 @@
+
+  {% if product.metafields.custom.card01_title %}
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+<div class="ingredients-section swiper mySwiper">
+  <div class="ingredients-header">
+    <h3>{{ section.settings.header1 }}</h3>
+    <h4>{{ section.settings.header2 }}</h4>
+  </div>
+  <div class="ingredients-container swiper-wrapper">
+      {% if product.metafields.custom.card01_link %}<a href="{{ product.metafields.custom.card01_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card01_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card01_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card01_feature1 != null %}<li>{{ product.metafields.custom.card01_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card01_feature2 != null %}<li>{{  product.metafields.custom.card01_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card01_feature3 != null %}<li>{{  product.metafields.custom.card01_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card01_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card01_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card01_link %}</a> {% else %} </div>{% endif %}
+      {% if product.metafields.custom.card02_link %}<a href="{{ product.metafields.custom.card02_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card02_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card02_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card02_feature1 != null %}<li>{{ product.metafields.custom.card02_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card02_feature2 != null %}<li>{{  product.metafields.custom.card02_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card02_feature3 != null %}<li>{{  product.metafields.custom.card02_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card02_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card02_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card02_link %}</a> {% else %} </div>{% endif %}
+      {% if product.metafields.custom.card03_link %}<a href="{{ product.metafields.custom.card03_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card03_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card03_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card03_feature1 != null %}<li>{{ product.metafields.custom.card03_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card03_feature2 != null %}<li>{{  product.metafields.custom.card03_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card03_feature3 != null %}<li>{{  product.metafields.custom.card03_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card03_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card03_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card03_link %}</a> {% else %} </div>{% endif %}
+      {% if product.metafields.custom.card04_link %}<a href="{{ product.metafields.custom.card04_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card04_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card04_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card04_feature1 != null %}<li>{{ product.metafields.custom.card04_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card04_feature2 != null %}<li>{{  product.metafields.custom.card04_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card04_feature3 != null %}<li>{{  product.metafields.custom.card04_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card04_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card04_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card04_link %}</a> {% else %} </div>{% endif %}
+      {% if product.metafields.custom.card05_link %}<a href="{{ product.metafields.custom.card05_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card05_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card05_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card05_feature1 != null %}<li>{{ product.metafields.custom.card05_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card05_feature2 != null %}<li>{{  product.metafields.custom.card05_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card05_feature3 != null %}<li>{{  product.metafields.custom.card05_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card05_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card05_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card05_link %}</a> {% else %} </div>{% endif %}
+      {% if product.metafields.custom.card06_link %}<a href="{{ product.metafields.custom.card06_link }}" class="ingredient-item swiper-slide"> {% else %} <div  class="ingredient-item swiper-slide"> {% endif %}
+          <div class="content-info">
+            <h3>{{ product.metafields.custom.card06_title }}</h3>
+            <p class="description">{{ product.metafields.custom.card06_description }}</p>
+            <ul>
+              {% if product.metafields.custom.card06_feature1 != null %}<li>{{ product.metafields.custom.card06_feature1 }}</li>{% endif %}
+              {% if product.metafields.custom.card06_feature2 != null %}<li>{{  product.metafields.custom.card06_feature2 }}</li>{% endif %}
+              {% if product.metafields.custom.card06_feature3 != null %}<li>{{  product.metafields.custom.card06_feature3 }}</li>{% endif %}
+            </ul>
+           {% if product.metafields.custom.card06_link %}} <p class="learn-more">Learn more</p> {% endif %}
+          </div>
+          <img src="{{ product.metafields.custom.card06_image | img_url: 'medium' }}" alt="{{ ingredient.settings.title }}" class="ingredient-image">
+      {% if product.metafields.custom.card06_link %}</a> {% else %} </div>{% endif %}
+        
+  </div>
+  <div class="navigation">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  <a onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="ingredientsCTA button"> {{ section.settings.button-text }}</a>
+    </div>
+      {% endif %}
+
+
+<style>
+.navigation{
+  width: 100%;
+  position: absolute;
+  --swiper-navigation-size: 25px;
+  --swiper-theme-color:  var(--primary-purple);
+  bottom: 65px;
+  height: 20px;
+  display: flex;
+  jusitfy-content: space-between;
+  align-items: center;
+  color: white;
+}
+     
+  .ingredients-header h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0;
+  color: {{ section.settings.header1-color }};
+  letter-spacing: 1px;
+}
+
+.ingredients-header h4 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  color: #886bd9;
+}
+
+.ingredientsCTA {
+  background: linear-gradient(180deg, rgba(76, 25, 216, 1), rgba(76, 25, 216, 1) 100%);
+  margin: 50px auto 0;
+}
+
+.button {
+  background-color: var(--primary-purple);
+  color: #fefbf5;
+  border-radius: 9px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  min-width: 286px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 171.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media(min-width: 900px){
+ .ingredients-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+} 
+}
+
+.ingredient-item {
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  border-radius: 22px;
+  padding: 12px 0 10px 10px;
+  /* border: 2px teal solid; */
+  height: 280px;
+  cursor: pointer;
+}
+  .ingredients-section {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+    position:relative;
+    margin-bottom: 30px;
+}
+.content-info .description {
+  color: #2F2F2F;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.content-info ul li {
+  color: #2F2F2F;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.content-info h3 {
+  color: #4C19D8;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+
+.ingredient-image {
+  max-width: 160px;
+  display: block;
+  object-fit: contain;
+}
+
+.content-info {
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-around;
+}
+
+.content-info .learn-more {
+  color: #4C19D8;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 116%;
+  margin-top: 10px;
+}
+ 
+ @media (max-width: 1200px) {
+  .content-info .description {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .content-info ul li {
+    font-size: 14px;
+    color: #2F2F2F;
+    font-weight: 500;
+  }
+
+  .content-info h3 {
+    color: #4C19D8;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .ingredient-image {
+    max-width: 130px;
+  }
+}
+ 
+ @media (max-width: 1050px) {
+  .content-info .description {
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 14px;
+  }
+  .content-info ul li {
+    font-size: 14px;
+    color: #2F2F2F;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .content-info h3 {
+    color: #4C19D8;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .ingredient-image {
+    max-width: 115px;
+  }
+} 
+  @media(max-width:900px){
+    .button {
+  width: 100%;
+}
+     .ingredient-image {
+    max-width: 110px;
+  }
+      .content-info .description {
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 16px;
+  }
+  .content-info ul li {
+    font-size: 14px;
+    color: #2F2F2F;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .content-info h3 {
+    color: #4C19D8;
+    font-size: 16px;
+    font-weight: 900;
+  }
+  }
+  @media(max-width:600px){
+     .ingredient-image {
+    max-width: 100px;
+  }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Ingredients Section",
+  "settings": [
+    {
+          "type": "text",
+          "id": "header1",
+          "label": "Title line",
+      "default": "It's What's Inside"
+        },
+    {
+          "type": "color",
+          "id": "header1-color",
+          "label": "Title line color",
+      "default": "#fffefe"
+        },
+    {
+          "type": "text",
+          "id": "header2",
+          "label": "Title",
+      "default": "That Counts"
+        },
+    {
+          "type": "text",
+          "id": "button-text",
+          "label": "Button Text",
+      "default": "TRY IT NOW"
+        },
+  ],
+  "presets": [
+    {
+      "name": "Ingredients Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+          if (window.innerWidth <= 900) {
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        pagination: {
+          el: ".navigation .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".navigation .swiper-button-next",
+          prevEl: ".navigation .swiper-button-prev",
+        },
+          slidesPerView: 1.3,
+            centeredSlides: true,
+         loop: true,
+            autoplay: {
+                delay: 6000,
+            }
+      });
+        }
+    </script>

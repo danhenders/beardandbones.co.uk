@@ -1,0 +1,173 @@
+metadata:
+  type: Policy
+  category: Privacy
+  version: "2025"
+  last_updated: "2024-01-30"
+  effective_date: "2025-01-01"
+
+overview: |
+  This privacy policy explains how we collect, use, and protect your personal information
+  when you use our website or services.
+
+data_collection:
+  personal_data:
+    basic:
+      - name: "Full Name"
+        purpose: "Order processing and communication"
+      - name: "Email Address"
+        purpose: "Order confirmation and updates"
+      - name: "Shipping Address"
+        purpose: "Order delivery"
+      - name: "Phone Number"
+        purpose: "Delivery updates and customer service"
+    
+    payment:
+      - name: "Payment Method"
+        purpose: "Transaction processing"
+        storage: "Not stored directly - handled by payment processor"
+      
+    optional:
+      - name: "Marketing Preferences"
+        purpose: "Personalized communications"
+      - name: "Product Preferences"
+        purpose: "Personalized recommendations"
+
+  cookies:
+    essential:
+      - name: "Session Cookie"
+        purpose: "Maintain shopping cart"
+        duration: "Session"
+      - name: "Authentication"
+        purpose: "Keep you logged in"
+        duration: "30 days"
+    
+    analytics:
+      - name: "Google Analytics"
+        purpose: "Website performance"
+        duration: "2 years"
+      - name: "Hotjar"
+        purpose: "User experience improvement"
+        duration: "1 year"
+
+data_usage:
+  primary_purposes:
+    - purpose: "Order Processing"
+      description: "Fulfilling your orders and managing delivery"
+    - purpose: "Customer Service"
+      description: "Providing support and handling inquiries"
+    - purpose: "Account Management"
+      description: "Managing your account and preferences"
+  
+  marketing:
+    consent_required: true
+    opt_out_available: true
+    channels:
+      - "Email"
+      - "SMS"
+      - "Social Media"
+
+data_protection:
+  security_measures:
+    - "SSL encryption"
+    - "Secure payment processing"
+    - "Regular security audits"
+    - "Employee training"
+  
+  retention:
+    order_data: "7 years"
+    marketing_data: "Until opt-out"
+    inactive_accounts: "2 years"
+
+user_rights:
+  access_rights:
+    - right: "Access Data"
+      description: "Request copy of personal data"
+    - right: "Correction"
+      description: "Update incorrect information"
+    - right: "Deletion"
+      description: "Request data removal"
+    - right: "Portability"
+      description: "Transfer data to another service"
+
+  request_process:
+    timeline: "30 days"
+    verification_required: true
+    contact_method: "privacy@beardandbones.co.uk"
+
+ai_handling:
+  privacy_queries:
+    sensitive_topics:
+      - "Data deletion requests"
+      - "Security breaches"
+      - "Legal complaints"
+      - "GDPR violations"
+    
+    verification_required:
+      - "Personal data access requests"
+      - "Data modification requests"
+      - "Marketing preferences changes"
+      - "Account deletion requests"
+
+  response_guidelines:
+    data_requests:
+      - "Never reveal personal data in chat"
+      - "Direct to formal request process"
+      - "Verify identity before proceeding"
+      - "Document all interactions"
+    
+    marketing_opt_out:
+      - "Process immediately"
+      - "Confirm across all channels"
+      - "Provide confirmation"
+      - "Explain retention period"
+
+  probing_questions:
+    identity_verification:
+      - "Can you please provide your order number or registered email?"
+      - "When did you create your account?"
+      - "What was your last order date?"
+    
+    request_clarification:
+      - "Which specific data would you like to access/modify?"
+      - "Are you requesting this for marketing or all communications?"
+      - "Would you like this for a specific time period?"
+
+  information_control:
+    do_not_discuss:
+      - "Internal data processing methods"
+      - "Employee access levels"
+      - "Security implementation details"
+      - "Other customer's data"
+    
+    escalation_triggers:
+      - "Mention of legal action"
+      - "Data breach concerns"
+      - "GDPR compliance questions"
+      - "Complex data requests"
+
+ai_response_templates:
+  data_request: |
+    I understand you're requesting access to your personal data.
+    For your security, we need to verify your identity and process this through our formal channels.
+    Please email {contact_method} with:
+    {verification_requirements}
+    
+  marketing_opt_out: |
+    I'll help you update your marketing preferences.
+    First, I'll need to verify a few details:
+    {verification_questions}
+    
+  security_concern: |
+    I understand your concern about data security.
+    Let me assure you that we take this very seriously and employ multiple security measures:
+    {security_measures}
+    
+  data_deletion: |
+    Thank you for your data deletion request.
+    This process requires formal verification and will be handled by our privacy team.
+    Please note: {retention_requirements}
+    
+  escalation: |
+    Given the nature of your privacy request, I'll need to escalate this to our dedicated privacy team.
+    They will contact you within {timeline} at {contact_method}.
+    In the meantime, {immediate_steps} 

@@ -1,0 +1,218 @@
+metadata:
+  type: Support Document
+  category: Troubleshooting
+  version: "2025"
+  last_updated: "2024-02-20"
+  priority: High
+
+overview: |
+  Comprehensive troubleshooting guide for common issues and their resolutions.
+  Includes decision trees, diagnostic steps, and solution paths.
+
+common_issues:
+  product_reactions:
+    symptoms:
+      - "Skin irritation"
+      - "Redness"
+      - "Itching"
+      - "Burning sensation"
+    diagnostic_steps:
+      1: "Confirm product used"
+      2: "Identify affected area"
+      3: "Duration of symptoms"
+      4: "Previous allergies"
+    immediate_actions:
+      - "Stop product use immediately"
+      - "Document reaction details"
+      - "Request photos if possible"
+    resolution_path:
+      priority: "High"
+      response_time: "1 hour"
+      actions:
+        - "Issue refund"
+        - "Provide aftercare advice"
+        - "Log for quality control"
+      follow_up:
+        timing: "48 hours"
+        check_points:
+          - "Symptom improvement"
+          - "Medical attention needed"
+          - "Product return status"
+
+  delivery_issues:
+    missing_parcel:
+      diagnostic_steps:
+        1: "Verify shipping address"
+        2: "Check tracking history"
+        3: "Contact courier"
+        4: "Review delivery attempts"
+      resolution_options:
+        confirmed_lost:
+          - "Process refund"
+          - "Resend order"
+          - "File courier claim"
+        delayed:
+          - "Provide new timeline"
+          - "Offer compensation"
+          - "Update tracking"
+    
+    wrong_address:
+      diagnostic_steps:
+        1: "Compare entered vs actual address"
+        2: "Check address verification system"
+        3: "Review customer communication"
+      resolution_options:
+        recoverable:
+          - "Redirect package"
+          - "Update shipping details"
+        non_recoverable:
+          - "Process refund"
+          - "Create new order"
+          - "Update customer profile"
+
+  product_performance:
+    scent_issues:
+      diagnostic_steps:
+        1: "Verify batch number"
+        2: "Check storage conditions"
+        3: "Duration since purchase"
+      resolution_options:
+        - "Replace product"
+        - "Offer alternative scent"
+        - "Process refund"
+    
+    consistency_issues:
+      diagnostic_steps:
+        1: "Check product appearance"
+        2: "Verify storage temperature"
+        3: "Review usage method"
+      resolution_options:
+        - "Provide usage guidance"
+        - "Replace if defective"
+        - "Update product instructions"
+
+decision_trees:
+  shipping_issues:
+    start: "Delivery Problem Reported"
+    questions:
+      - "Has the package been marked as delivered?"
+      - "Is the tracking number valid?"
+      - "Is the delivery address correct?"
+    outcomes:
+      delivered_not_received:
+        path: "Investigation required"
+        actions: "Contact courier"
+      wrong_address:
+        path: "Address verification"
+        actions: "Redirect or refund"
+      lost_package:
+        path: "Lost package protocol"
+        actions: "Refund or replace"
+
+  product_issues:
+    start: "Product Issue Reported"
+    questions:
+      - "Is this a safety concern?"
+      - "Is the product damaged?"
+      - "Is this a performance issue?"
+    outcomes:
+      safety_concern:
+        path: "Immediate action required"
+        actions: "Escalate to management"
+      damaged_product:
+        path: "Return process"
+        actions: "Replace or refund"
+      performance_issue:
+        path: "Troubleshooting steps"
+        actions: "Guide or replace"
+
+resolution_templates:
+  shipping_delay: |
+    We understand your concern about the delayed delivery.
+    Current Status: {status}
+    Expected Delivery: {date}
+    Compensation Offered: {compensation}
+
+  product_reaction: |
+    We take allergic reactions very seriously.
+    Immediate Actions:
+    1. {immediate_actions}
+    2. {follow_up_steps}
+    3. {compensation_details}
+
+  wrong_item: |
+    We apologize for sending the incorrect item.
+    Resolution Steps:
+    1. {return_instructions}
+    2. {replacement_details}
+    3. {compensation_offered}
+
+ai_handling:
+  diagnostic_process:
+    steps:
+      1: "Identify issue category"
+      2: "Follow decision tree"
+      3: "Collect required information"
+      4: "Propose solution"
+      5: "Verify resolution"
+
+  confidence_scoring:
+    factors:
+      - "Issue clarity"
+      - "Available information"
+      - "Similar past cases"
+      - "Resolution certainty"
+    
+    thresholds:
+      high: 85
+      medium: 70
+      low: 50
+
+  escalation_triggers:
+    - "Safety concerns"
+    - "Legal implications"
+    - "Multiple issues"
+    - "High-value orders"
+    - "VIP customers"
+
+monitoring:
+  success_metrics:
+    - "Resolution time"
+    - "Customer satisfaction"
+    - "First-contact resolution"
+    - "Escalation rate"
+    
+  feedback_loop:
+    - "Track common issues"
+    - "Update documentation"
+    - "Improve processes"
+    - "Train AI system"
+
+integration:
+  telegram_alerts:
+    high_priority: |
+      🚨 Urgent Issue
+      Type: {issue_type}
+      Customer: {customer_name}
+      Order: {order_id}
+      Action Required: {action}
+
+    resolution_update: |
+      ✅ Issue Resolved
+      Ticket: {ticket_id}
+      Resolution: {resolution}
+      Time to Resolve: {time}
+      Customer Satisfaction: {satisfaction}
+
+continuous_improvement:
+  data_collection:
+    - "Issue frequency"
+    - "Resolution effectiveness"
+    - "Customer feedback"
+    - "Process efficiency"
+    
+  review_schedule:
+    daily: "High-priority issues"
+    weekly: "Common problems"
+    monthly: "Process updates"
+    quarterly: "Guide revisions" 

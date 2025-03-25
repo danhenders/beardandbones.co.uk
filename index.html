@@ -1,0 +1,296 @@
+<style>
+.ugc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+.ugc-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ugc-header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.ugc-subheading {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.ugc-section {
+  margin-bottom: 60px;
+}
+
+.ugc-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Steps Section */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-weight: bold;
+}
+
+/* Rewards Section */
+.rewards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.reward-card {
+  width: 200px;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.reward-card.featured {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: scale(1.05);
+}
+
+.reward-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.reward-card h3 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+/* Guidelines Section */
+.guidelines-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.guidelines-list li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.guidelines-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+
+.guidelines-list li strong {
+  color: #fff;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 20px 0;
+  border: 2px solid #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.submit-button:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.terms-note {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.gallery-item {
+  height: 180px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.gallery-note {
+  text-align: center;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .step {
+    flex: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .ugc-header h1 {
+    font-size: 32px;
+  }
+  
+  .ugc-section h2 {
+    font-size: 28px;
+  }
+}
+</style>
+
+<div class="ugc-container">
+  <div class="ugc-header">
+    <h1>Share Your Beard &amp; Bones Experience</h1>
+    <p class="ugc-subheading">Join our community and earn rewards for your content</p>
+  </div>
+  
+  <div class="ugc-content">
+    <div class="ugc-section">
+      <h2>How It Works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Create</h3>
+          <p>Take photos or videos showing how you use Beard &amp; Bones products</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Submit</h3>
+          <p>Fill out our simple form and upload your content</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Earn</h3>
+          <p>Get rewards for approved submissions to use on your next purchase</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ugc-section rewards-section">
+      <h2>Rewards</h2>
+      <div class="rewards-container">
+        <div class="reward-card">
+          <div class="reward-icon">📱</div>
+          <h3>£5</h3>
+          <p>For approved photo submissions</p>
+        </div>
+        <div class="reward-card featured">
+          <div class="reward-icon">🎥</div>
+          <h3>£10</h3>
+          <p>For approved video submissions</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ugc-section guidelines-section">
+      <h2>Content Guidelines</h2>
+      <ul class="guidelines-list">
+        <li><strong>Be authentic</strong> - We want real experiences from real customers</li>
+        <li><strong>Show the product</strong> - Make sure our product is visible in your content</li>
+        <li><strong>Good lighting</strong> - Film or photograph in well-lit environments</li>
+        <li><strong>For videos:</strong> 30-90 seconds showing product use and your review</li>
+        <li><strong>For photos:</strong> Clear images showing you with our products</li>
+      </ul>
+    </div>
+    
+    <div class="ugc-section cta-section">
+      <h2>Ready to Share?</h2>
+      <p>Submit your content now and join the Beard &amp; Bones community</p>
+      <a href="YOUR_GOOGLE_FORM_URL_HERE" class="submit-button">Submit Your Content</a>
+      <p class="terms-note">By submitting content, you agree to let us share your photos/videos on our social media channels and website.</p>
+    </div>
+    
+    <div class="ugc-section community-section">
+      <h2>Join Our Community</h2>
+      <div class="gallery">
+        <!-- Insert 6-8 example UGC images here -->
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_1');"></div>
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_2');"></div>
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_3');"></div>
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_4');"></div>
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_5');"></div>
+        <div class="gallery-item" style="background-image: url('EXAMPLE_IMAGE_6');"></div>
+      </div>
+      <p class="gallery-note">Real content from our community. You could be featured next!</p>
+    </div>
+  </div>
+</div> 

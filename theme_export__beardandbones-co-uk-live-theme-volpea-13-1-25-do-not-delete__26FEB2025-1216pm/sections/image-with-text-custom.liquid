@@ -1,0 +1,317 @@
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+<style>
+    #shopify-section-{{section.id}} h3{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 100%;
+      color: #75b1bd;
+      margin-bottom: 5px;
+      margin-top: 22px;
+    }
+    #shopify-section-{{section.id}} h3:first-child {
+        margin-top: 0px;
+    }
+    #shopify-section-{{section.id}} p{
+      margin: 0;
+      /* font-family: Lato; */
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    #shopify-section-{{section.id}} h2 span {
+      color: #75b1bd;
+    }
+    #shopify-section-{{section.id}} h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 100%;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    #shopify-section-{{section.id}} .subheading {
+      margin: 0 0 25px 0;
+      /* font-family: Lato; */
+      font-style: normal;
+      /* font-weight: 700; */
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0;
+      text-transform: inherit;
+    }
+    @media only screen and (min-width:750px){
+      #shopify-section-{{section.id}} .feature-row__text--left {
+          padding-left: 0px !important;
+        margin-left: 0 !important;
+      }
+      #shopify-section-{{section.id}} .feature-row__text {
+          min-width: 53%;
+          flex: 0 1 53%;
+          padding: 0;
+      }
+      #shopify-section-{{section.id}} .feature-row__item {
+          flex: 0 1 47%;
+          margin: 0 auto;
+      }
+      #shopify-section-{{section.id}} .feature-row {
+          gap: 20px;
+        /* align-items: flex-start; */
+      }
+      .desktop-content{
+        display:none;
+        max-width: 1200px;
+        padding: 0 60px;
+        text-align: center;
+      }
+      .mobile-content{
+        display:block;
+      }
+    }
+    @media only screen and (max-width:750px){
+      #shopify-section-{{section.id}} h3 {
+          font-size: 20px;
+          line-height: 100%;
+          margin-top: 28px;
+      }
+      #shopify-section-{{section.id}} p {
+          font-size: 14px;
+      }
+      #shopify-section-{{section.id}}  .feature-row__text {
+        padding: 30px 0px 0;
+      }
+      #shopify-section-{{section.id}} h3:first-child {
+          margin-top: 0px;
+      }
+      .desktop-content{
+        display:none;
+      }
+      .mobile-content{
+        display:block;
+      }
+      #shopify-section-{{section.id}} .subheading {
+          font-size: 14px;
+          font-weight: 500;
+      }
+      #shopify-section-{{section.id}} h2 {
+          font-size: 20px;
+          line-height: 120%;
+          margin-bottom: 5px;
+      }
+    }
+</style>
+{%- liquid
+  assign overlap_images = true
+  if section.settings.image != blank and section.settings.image2 == blank
+    assign overlap_images = false
+  endif
+-%}
+
+<div class="index-section">
+
+  <div class="page-width feature-row-wrapper">
+    {%- capture image_layout -%}
+      <div class="feature-row__item{% if overlap_images %} feature-row__item--overlap-images{% endif %}" style="max-width: {{ section.settings.image_width }}px" data-aos>
+          {%- if section.settings.image != blank -%}
+            <div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image"
+                    src="{{ section.settings.image | img_url:"master" }}"
+                    alt="{{ section.settings.image.alt }}">
+                </div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.image2 != blank -%}
+            <div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image2.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image2.alt }}">
+                </div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.image == blank and section.settings.image2 == blank -%}
+            <div>
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+            <div>
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+          {%- endif -%}
+      </div>
+    {%- endcapture -%}
+    <div class="desktop-content">
+          {%- if section.settings.title != blank -%}
+            <div class=" appear-delay{% cycle '','-1','-2','-3','-4' %}"><h2>{{ section.settings.title  }}</h2></div>
+          {%- endif -%}
+          {%- if section.settings.subtitle != blank -%}
+            <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+          {%- endif -%}
+    </div>
+    <div class="feature-row">
+      {%- if section.settings.layout == 'left' -%}
+        {{ image_layout }}
+      {%- endif -%}
+
+      <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} text-{{ section.settings.align_text }}" data-aos>
+        <div class="mobile-content">
+          {%- if section.settings.title != blank -%}
+            <div class=" appear-delay{% cycle '','-1','-2','-3','-4' %}"><h2>{{ section.settings.title  }}</h2></div>
+          {%- endif -%}
+          {%- if section.settings.subtitle != blank -%}
+            <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}
+          <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
+            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.layout == 'right' -%}
+        {{ image_layout }}
+      {%- endif -%}
+    </div>
+  </div>
+
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "Image with text custom",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.text-and-image.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "t:sections.text-and-image.settings.image2.label"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "t:sections.text-and-image.settings.image_width.label",
+      "default": 700,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.text-and-image.settings.subtitle.label"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "t:sections.text-and-image.settings.title.label",
+      "default": "Image with text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:sections.text-and-image.settings.text.label",
+      "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.text-and-image.settings.button_label.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.text-and-image.settings.button_link.label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "t:sections.text-and-image.settings.button_style.label",
+      "default": "primary",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.text-and-image.settings.button_style.options.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.text-and-image.settings.button_style.options.secondary.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "t:sections.text-and-image.settings.align_text.label",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text-and-image.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.text-and-image.settings.align_text.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.text-and-image.settings.align_text.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.text-and-image.settings.layout.label",
+      "default": "right",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text-and-image.settings.layout.options.left.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.text-and-image.settings.layout.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.text-and-image.settings.divider.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text custom"
+    }
+  ]
+}
+{% endschema %}

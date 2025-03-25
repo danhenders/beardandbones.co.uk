@@ -1,0 +1,251 @@
+metadata:
+  type: Support Document
+  category: Customer Service
+  version: "2025"
+  last_updated: "2024-02-20"
+  priority: High
+
+overview: |
+  Comprehensive guide for handling customer issues and their resolutions.
+  Includes step-by-step processes, decision trees, and response templates.
+
+issue_categories:
+  order_issues:
+    - title: "Wrong Item Received"
+      priority: High
+      stages:
+        initial_contact:
+          steps:
+            - action: "Acknowledge the Issue"
+              details:
+                - "Send an apologetic email"
+                - "Express understanding"
+                - "Assure prompt resolution"
+            
+            - action: "Request Information"
+              required_info:
+                - "Image of wrong item received"
+                - "Image of packaging and shipping label (optional)"
+                - "Order ID if not provided"
+            
+            - action: "Confirm the Issue"
+              verification:
+                - "Review images"
+                - "Compare with order details"
+        
+        resolution:
+          options:
+            correct_item_available:
+              - "Ship immediately at no cost"
+              - "Provide tracking information"
+            correct_item_unavailable:
+              - "Offer refund"
+              - "Offer replacement of equal value"
+          
+          communication:
+            - "Explain options clearly"
+            - "Confirm customer preference"
+        
+        return_process:
+          requirements:
+            - "Original packaging"
+            - "Unused/undamaged condition"
+          actions:
+            - "Provide prepaid return label"
+          exceptions:
+            low_value:
+              threshold: "£10 or lower"
+              action: "Consider letting customer keep item"
+        
+        internal_resolution:
+          fulfillment_notification:
+            - "Share order details"
+            - "Include customer images"
+            - "Track return status"
+          followup:
+            - "Thank customer"
+            - "Confirm resolution"
+            - "Offer goodwill gesture if appropriate"
+    
+    - title: "Missing Item from Order"
+      priority: High
+      stages:
+        verification:
+          steps:
+            - "Check packing process records"
+            - "Request package contents image"
+            - "Review shipping documentation"
+        
+        resolution:
+          scenarios:
+            packing_error:
+              - "Ship missing item immediately"
+              - "No additional cost to customer"
+            lost_in_transit:
+              - "Treat as missing parcel case"
+              - "Follow missing parcel protocol"
+    
+    - title: "Missing Parcel"
+      priority: High
+      stages:
+        investigation:
+          verify_details:
+            - "Order number"
+            - "Delivery address"
+            - "Tracking information"
+          tracking_check:
+            - "Review courier system"
+            - "Verify delivery status"
+            - "Note any delays"
+        
+        resolution:
+          confirmed_lost:
+            options:
+              - "Resend order"
+              - "Issue full refund"
+          delayed:
+            actions:
+              - "Inform customer of new timeline"
+              - "Offer shipping compensation"
+    
+    - title: "Delivered but Not Received"
+      priority: High
+      stages:
+        investigation:
+          gather_info:
+            - "Delivery confirmation details"
+            - "GPS data if available"
+            - "Photo evidence from courier"
+          customer_verification:
+            - "Check with neighbors"
+            - "Review common delivery spots"
+            - "Confirm delivery address"
+        
+        resolution:
+          stolen:
+            actions:
+              - "Resend order"
+              - "Consider filing courier claim"
+          misdelivered:
+            actions:
+              - "Initiate courier investigation"
+              - "Resend or refund based on findings"
+    
+    - title: "Damaged Items"
+      priority: High
+      stages:
+        documentation:
+          required_photos:
+            - "Damaged item"
+            - "Packaging condition"
+            - "Shipping label"
+          assessment:
+            - "Transit damage vs packaging issue"
+            - "Product defect evaluation"
+        
+        resolution:
+          immediate_actions:
+            - "Replace item"
+            - "Issue refund"
+            - "Provide return label if needed"
+          prevention:
+            - "Review packaging methods"
+            - "Update shipping procedures if needed"
+
+fulfillment_center:
+  contact:
+    email: "admin@fulfilment4you.co.uk"
+  contact_reasons:
+    - "Packing errors"
+    - "Wrong items shipped"
+    - "Missing items"
+    - "Damaged product reports"
+  issue_template: |
+    Subject: Fulfillment Issue - Order #[Number]
+
+    Order Details:
+    - Order ID: [Number]
+    - Customer: [Name]
+    - Date: [Order Date]
+
+    Issue Description:
+    [Detailed description of the problem]
+
+    Required Action:
+    [Specific actions needed]
+
+    Supporting Information:
+    [Any relevant images or documentation]
+
+communication_guidelines:
+  best_practices:
+    - "Respond promptly and professionally"
+    - "Show empathy and understanding"
+    - "Provide clear resolution steps"
+    - "Follow up after resolution"
+  
+  documentation:
+    requirements:
+      - "Log all customer interactions"
+      - "Save all relevant images"
+      - "Record resolution details"
+      - "Track patterns for process improvement"
+
+escalation_protocol:
+  triggers:
+    - "Issue remains unresolved after standard process"
+    - "Customer is particularly distressed"
+    - "Situation requires policy exception"
+    - "Multiple issues with same order"
+    - "Chargeback cases"
+
+ai_handling:
+  confidence_scoring:
+    factors:
+      - "Issue identification accuracy"
+      - "Resolution path clarity"
+      - "Policy alignment"
+      - "Customer history context"
+    
+    thresholds:
+      high: 0.8
+      medium: 0.6
+      low: 0.4
+  
+  response_templates:
+    acknowledgment: |
+      Thank you for bringing this to our attention. I understand you're experiencing [issue_type] with your order #[order_id]. I'll help resolve this right away.
+    
+    information_request: |
+      To help resolve this quickly, could you please provide:
+      [required_info_list]
+    
+    resolution_proposal: |
+      Based on your situation, I recommend:
+      [resolution_steps]
+      
+      Would this solution work for you?
+    
+    follow_up: |
+      I've processed [action_taken] for your order. You should receive [expected_outcome] within [timeframe].
+      
+      Is there anything else you need assistance with?
+  
+  learning_system:
+    track_metrics:
+      - "Resolution success rate"
+      - "Customer satisfaction"
+      - "Response accuracy"
+      - "Resolution time"
+    
+    improvement_triggers:
+      - "Repeated issue patterns"
+      - "Customer feedback"
+      - "Resolution effectiveness"
+      - "Process efficiency"
+    
+    update_frequency:
+      - "Real-time for critical issues"
+      - "Daily for pattern analysis"
+      - "Weekly for process improvements"
+      - "Monthly for policy reviews" 

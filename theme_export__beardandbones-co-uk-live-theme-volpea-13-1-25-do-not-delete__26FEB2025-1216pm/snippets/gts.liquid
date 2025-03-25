@@ -1,0 +1,23 @@
+{% if shop.metafields.simprosys_gcr.merchant_id == blank %}
+<!-- BEGIN: Google Customer Review by Simprosys InfoMedia For Any Assistance on this Code contact support@simprosys.com -->
+                    <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+                    <script> 
+                    window.renderBadge = function() {
+                        var ratingBadgeContainer = document.createElement("div");
+                        document.body.appendChild(ratingBadgeContainer);
+                        window.gapi.load("ratingbadge", function() {
+                            window.gapi.ratingbadge.render(
+                            ratingBadgeContainer, {
+                                "merchant_id": 1091573466,
+                                "position": "BOTTOM_RIGHT"
+                            });           
+                        });
+                    }
+                    </script>
+                    <script>
+                    window.___gcfg = {
+                        lang: "en_GB"
+                    };
+                    </script>
+                    <!-- END: Google Customer Review  by Simprosys InfoMedia-->
+{% endif %}

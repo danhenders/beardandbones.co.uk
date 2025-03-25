@@ -1,0 +1,132 @@
+ingredients:
+  jojoba_oil:
+    name: "Jojoba Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "Closely mimics natural skin oils"
+      - "Moisturizes without being greasy"
+      - "Non-comedogenic (won't clog pores)"
+    properties:
+      - "Light and fast-absorbing"
+      - "Long shelf life"
+      - "Suitable for all skin types"
+      
+  meadowfoam_seed_oil:
+    name: "Meadowfoam Seed Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "Superior moisturizing properties"
+      - "Helps lock in moisture"
+      - "Promotes healthy skin barrier"
+    properties:
+      - "Light texture"
+      - "Non-greasy feel"
+      - "Excellent stability"
+      
+  squalane:
+    name: "Squalane"
+    type: "Emollient"
+    benefits:
+      - "Exceptional moisturizing"
+      - "Helps prevent moisture loss"
+      - "Promotes skin elasticity"
+    properties:
+      - "Lightweight"
+      - "Non-comedogenic"
+      - "Suitable for sensitive skin"
+      
+  coco_caprylate:
+    name: "Coco-Caprylate"
+    type: "Emollient"
+    benefits:
+      - "Provides silky smooth feel"
+      - "Helps spread other ingredients"
+      - "Non-greasy texture"
+    properties:
+      - "Fast-absorbing"
+      - "Natural alternative to silicones"
+      - "Environmentally friendly"
+      
+  castor_oil:
+    name: "Castor Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "Promotes hair growth"
+      - "Anti-inflammatory properties"
+      - "Natural antimicrobial"
+    properties:
+      - "Thick consistency"
+      - "Rich in ricinoleic acid"
+      - "Natural conditioning"
+      
+  sea_buckthorn_oil:
+    name: "Sea Buckthorn Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "Rich in vitamins and antioxidants"
+      - "Promotes skin healing"
+      - "Supports skin health"
+    properties:
+      - "Orange color"
+      - "Rich in Omega fatty acids"
+      - "Natural source of Vitamin E"
+      
+  buriti_oil:
+    name: "Buriti Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "High in beta-carotene"
+      - "Natural sun protection"
+      - "Anti-inflammatory properties"
+    properties:
+      - "Rich texture"
+      - "Natural source of Vitamin A"
+      - "Antioxidant properties"
+      
+  broccoli_seed_oil:
+    name: "Broccoli Seed Oil"
+    type: "Carrier Oil"
+    benefits:
+      - "Natural silicone alternative"
+      - "Promotes shine"
+      - "Moisturizing properties"
+    properties:
+      - "Light texture"
+      - "Fast absorption"
+      - "Rich in fatty acids"
+      
+  tocopherol:
+    name: "Tocopherol"
+    type: "Vitamin E"
+    benefits:
+      - "Powerful antioxidant"
+      - "Preserves oil freshness"
+      - "Supports skin health"
+    properties:
+      - "Natural preservative"
+      - "Skin-conditioning"
+      - "Extends product shelf life"
+      
+  bisabolol:
+    name: "Bisabolol"
+    type: "Active Ingredient"
+    benefits:
+      - "Calming and soothing"
+      - "Anti-inflammatory"
+      - "Enhances ingredient absorption"
+    properties:
+      - "Gentle on skin"
+      - "Natural derivative"
+      - "Skin-conditioning"
+      
+  panthenol:
+    name: "Panthenol"
+    type: "Pro-Vitamin B5"
+    benefits:
+      - "Moisturizing"
+      - "Promotes skin healing"
+      - "Improves hair flexibility"
+    properties:
+      - "Water-soluble"
+      - "Penetrates skin well"
+      - "Conditions hair and skin" 

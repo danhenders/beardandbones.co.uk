@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #000000;
+  --background: #ffffff;
+  --accent: #876447;
+  --dark: #101010;
+  --error: #C20000;
+  --border: #E8E8E1;
+  
+  /* shadcn/ui variables */
+  --radius: 0.5rem;
+  
+  --primary: var(--accent);
+  --primary-foreground: var(--foreground);
+  
+  --secondary: var(--dark);
+  --secondary-foreground: var(--foreground);
+  
+  --destructive: var(--error);
+  --destructive-foreground: var(--foreground);
+  
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  
+  --ring: var(--accent);
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-tenor uppercase tracking-wider;
+  }
+  
+  p {
+    @apply font-twentieth;
+  }
+  
+  /* Remove default focus outline and add custom one */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-black;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent px-8 py-3 font-tenor text-sm uppercase tracking-wider text-white transition hover:bg-accent/90;
+  }
+  
+  .btn-secondary {
+    @apply border border-white bg-transparent px-8 py-3 font-tenor text-sm uppercase tracking-wider text-white transition hover:bg-white/10;
+  }
+  
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply mb-12 text-center font-tenor text-3xl uppercase tracking-wider;
+  }
+}

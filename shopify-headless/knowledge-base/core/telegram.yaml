@@ -1,0 +1,111 @@
+metadata:
+  type: Integration
+  category: Communication
+  version: "2025"
+  last_updated: "2024-02-20"
+  priority: High
+
+telegram_config:
+  bot_name: "@Beardandbones_bot"
+  chat_id: "-914800100"
+  webhook_url: "https://www.beardandbones.co.uk/api/telegram/webhook"
+
+message_format:
+  ai_to_human:
+    template: |
+      Ticket #{ticket_id}
+      TELEGRAM
+      Priority: {priority}
+      Created: {timestamp}
+
+      Customer Details:
+      Name: {customer_name}
+      Email: {email}
+      Order: #{order_id}
+      Type: {customer_type} ({order_count} orders)
+      Preferred Scents: {preferred_scents}
+
+      Customer Message:
+      {message}
+
+      AI Analysis:
+      Confidence Score: {confidence}%
+      Category: {category}
+      
+      Proposed Response:
+      {ai_response}
+
+      Confidence Breakdown:
+      - Knowledge Match: {knowledge_score}/40
+      - Context: {context_score}/20
+      - Template: {template_score}/20
+      - History: {history_score}/10
+      - Policy: {policy_score}/10
+
+      Options:
+      1. Send AI message
+      2. Modify response
+      3. Reject and handle manually
+
+  human_response:
+    handle_directly: |
+      Human Handler Assigned
+      Handler: {handler_name}
+      ETA: {estimated_response_time}
+      Notes: {handler_notes}
+
+    ai_prompt: |
+      AI Prompt Provided
+      Prompt: {prompt_text}
+      Execute: {yes/no}
+      Confidence Target: {min_confidence_required}%
+
+categories:
+  - "Product Query"
+  - "Technical Support"
+  - "Order Issue"
+  - "Urgent Support"
+  - "Policy Question"
+  - "Other"
+
+response_tracking:
+  fields:
+    - "Message ID"
+    - "Response Time"
+    - "Handler"
+    - "Resolution Status"
+    - "Follow-up Required"
+    - "Confidence Score"
+    - "Resolution Success"
+    - "Customer Satisfaction"
+    - "Learning Points"
+
+notification_rules:
+  working_hours:
+    monday_friday: "09:00-17:00 GMT"
+    weekend: "Urgent Only"
+  
+  priority_response:
+    urgent: "Immediate"
+    high: "Within 1 hour"
+    normal: "Within 4 hours"
+    low: "Next business day"
+
+confidence_thresholds:
+  autonomous: 85
+  supervised: 70
+  assisted: 50
+  human_required: 0
+
+learning_integration:
+  success_tracking:
+    - track_resolution_outcome
+    - update_confidence_scores
+    - enhance_templates
+    - document_edge_cases
+  
+  feedback_loop:
+    - capture_human_modifications
+    - analyze_success_patterns
+    - update_knowledge_base
+    - adjust_confidence_weights 

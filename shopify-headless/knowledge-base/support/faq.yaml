@@ -1,0 +1,225 @@
+metadata:
+  type: Support Document
+  category: FAQ
+  version: "2025"
+  last_updated: "2024-02-20"
+  priority: High
+
+overview: |
+  Common questions and answers about Beard & Bones products, orders, shipping, and policies.
+  This document follows our professional but friendly brand voice while providing clear, accurate information.
+
+categories:
+  products:
+    general:
+      - question: "Are your products suitable for sensitive skin?"
+        answer: "Yes, our products are formulated with gentle, natural ingredients. However, we always recommend performing a patch test before first use. If you have specific sensitivities, please review our ingredient lists carefully."
+        confidence_factors:
+          - "Product ingredients knowledge"
+          - "Safety guidelines"
+          - "Patch testing protocol"
+      
+      - question: "Are your products vegan?"
+        answer: "Most of our products are vegan, except for our Beard Balm which contains beeswax. All products are cruelty-free and not tested on animals."
+        confidence_factors:
+          - "Product composition"
+          - "Ingredient verification"
+      
+      - question: "How long do your products last?"
+        answer: "Our products should be used within 12 months of delivery for optimal quality. They have a total shelf life of 24 months from manufacture when stored properly."
+        confidence_factors:
+          - "Product shelf life"
+          - "Storage requirements"
+    
+    usage:
+      - question: "How much Beard Oil should I use?"
+        answer: "For short beards, use 3-5 drops. For longer beards, use 5-7 drops. Apply to a clean, slightly damp beard and massage thoroughly from roots to tips."
+        confidence_factors:
+          - "Product usage guidelines"
+          - "Beard length assessment"
+      
+      - question: "How often should I apply Beard Oil?"
+        answer: "For best results, apply daily after washing your beard or showering. You can adjust the frequency based on your beard's needs."
+        confidence_factors:
+          - "Usage frequency guidelines"
+          - "Product application timing"
+      
+      - question: "What's the difference between Beard Balm and Beard Butter?"
+        answer: "Beard Balm provides hold and styling properties along with conditioning, while Beard Butter focuses on deep conditioning without the hold factor."
+        confidence_factors:
+          - "Product differentiation"
+          - "Feature comparison"
+
+  orders:
+    process:
+      - question: "How do I track my order?"
+        answer: "Once your order is dispatched, you'll receive a tracking number via email. You can use this to track your package through Royal Mail's website."
+        confidence_factors:
+          - "Order tracking process"
+          - "Shipping integration"
+      
+      - question: "Can I modify my order after placing it?"
+        answer: "Please contact us immediately at help@beardandbones.co.uk if you need to modify your order. We process orders quickly, so we can't guarantee changes after submission."
+        confidence_factors:
+          - "Order modification policy"
+          - "Processing timeframes"
+      
+      - question: "What payment methods do you accept?"
+        answer: "We accept all major credit/debit cards and PayPal. All payments are processed securely."
+        confidence_factors:
+          - "Payment methods"
+          - "Security protocols"
+    
+    shipping:
+      - question: "How long does delivery take?"
+        answer: |
+          UK delivery typically takes 2-4 working days. International delivery times vary:
+          - Western Europe: 5-7 working days
+          - US/Canada: 7-14 working days
+          - Australia/NZ: 7-14 working days
+        confidence_factors:
+          - "Shipping timeframes"
+          - "Geographic regions"
+      
+      - question: "Do you offer free shipping?"
+        answer: "Yes, we offer free UK shipping on orders over £40. International shipping costs vary by destination."
+        confidence_factors:
+          - "Shipping policy"
+          - "Order value thresholds"
+      
+      - question: "Do you ship internationally?"
+        answer: "Yes, we ship to most countries worldwide. Some locations are excluded - please check our shipping policy for details."
+        confidence_factors:
+          - "International shipping"
+          - "Location restrictions"
+
+  returns:
+    - question: "What is your return policy?"
+      answer: "We accept returns within 30 days of delivery. Products must be unopened and in original condition. Return shipping is the customer's responsibility."
+      confidence_factors:
+        - "Return timeframe"
+        - "Product condition requirements"
+    
+    - question: "What if I receive a damaged product?"
+      answer: "Please contact us within 48 hours of delivery with photos of the damage. We'll arrange a replacement or refund promptly."
+      confidence_factors:
+        - "Damage reporting timeline"
+        - "Resolution process"
+    
+    - question: "Can I return opened products?"
+      answer: "Generally, we cannot accept returns of opened products for hygiene reasons. However, we do consider refunds for allergic reactions or sensitivity issues."
+      confidence_factors:
+        - "Return restrictions"
+        - "Exception conditions"
+
+  product_care:
+    storage:
+      - question: "How should I store my products?"
+        answer: "Store in a cool, dry place away from direct sunlight. Keep containers tightly closed when not in use."
+        confidence_factors:
+          - "Storage requirements"
+          - "Product preservation"
+    
+    maintenance:
+      - question: "What's the best way to maintain product quality?"
+        answer: |
+          - Keep containers clean
+          - Avoid water contamination
+          - Replace caps immediately after use
+          - Don't expose to extreme temperatures
+          - Use clean, dry hands when handling products
+        confidence_factors:
+          - "Maintenance guidelines"
+          - "Quality preservation"
+
+  scents:
+    - question: "How can I choose the right scent?"
+      answer: "Try our Sample Kit containing 6x10ml bottles of our most popular scents. This allows you to experience each fragrance before committing to a full-size product."
+      confidence_factors:
+        - "Sample kit availability"
+        - "Scent selection process"
+    
+    - question: "How long do the scents last?"
+      answer: "Our fragrances are designed to last throughout the day while remaining subtle and sophisticated. Longevity can vary based on individual factors."
+      confidence_factors:
+        - "Fragrance longevity"
+        - "Scent characteristics"
+
+  account_privacy:
+    - question: "How do I update my account information?"
+      answer: "Log into your account on our website to update your details. For security changes, please contact customer service."
+      confidence_factors:
+        - "Account management"
+        - "Security protocols"
+    
+    - question: "How is my personal information protected?"
+      answer: "We follow strict GDPR guidelines and industry-standard security practices. See our Privacy Policy for detailed information."
+      confidence_factors:
+        - "Data protection"
+        - "Privacy compliance"
+
+  support:
+    - question: "How can I contact customer service?"
+      answer: "Email us at help@beardandbones.co.uk. We respond within 1 business day, Monday to Friday, 9 AM - 5 PM GMT."
+      confidence_factors:
+        - "Contact methods"
+        - "Response times"
+    
+    - question: "Do you offer product advice?"
+      answer: "Yes, our customer service team is knowledgeable about all our products and can provide personalized recommendations."
+      confidence_factors:
+        - "Product knowledge"
+        - "Personalization capability"
+
+additional_info:
+  product_education:
+    - "Detailed usage guides available"
+    - "Video tutorials on our website"
+    - "Regular blog posts with tips"
+    - "Social media content with advice"
+    - "Email newsletter with updates"
+
+  support_hours:
+    days: "Monday to Friday"
+    hours: "9 AM - 5 PM GMT"
+    holidays: "Closed on UK bank holidays"
+    email_monitoring: "During business hours"
+    response_time: "Within 1 business day"
+
+  useful_links:
+    - "Shipping Policy"
+    - "Returns Policy"
+    - "Privacy Policy"
+    - "Terms of Service"
+    - "Product Safety Guide"
+
+ai_handling:
+  confidence_scoring:
+    high_confidence:
+      - "Direct match with FAQ question"
+      - "Clear category alignment"
+      - "Standard policy information"
+    
+    medium_confidence:
+      - "Similar question with context"
+      - "Policy with exceptions"
+      - "Product-specific details"
+    
+    low_confidence:
+      - "Multiple policy interpretation"
+      - "Complex scenario"
+      - "Missing context"
+  
+  response_guidelines:
+    - "Use brand voice (professional but friendly)"
+    - "Include relevant policy references"
+    - "Link to additional resources when applicable"
+    - "Escalate complex queries to human support"
+    - "Verify product-specific information"
+
+  learning_triggers:
+    - "New question patterns"
+    - "Policy updates"
+    - "Product changes"
+    - "Seasonal variations"
+    - "Customer feedback patterns" 

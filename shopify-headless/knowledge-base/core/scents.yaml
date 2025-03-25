@@ -1,0 +1,44 @@
+scents:
+  billion:
+    name: "Billion"
+    notes:
+      top: ["grapefruit", "blood orange", "rose"]
+      middle: ["cinnamon", "mint"]
+      base: ["patchouli", "amber", "leather"]
+    description: "Top notes of grapefruit, blood orange, and rose, spiced with cinnamon and mint. Base notes include patchouli, amber, and leather"
+    
+  invictors:
+    name: "Invictors"
+    notes:
+      top: ["grapefruit", "bay leaf"]
+      middle: ["Hedione jasmine"]
+      base: ["patchouli", "oak moss", "ambergris"]
+    description: "Fresh grapefruit, bay leaf, and Hedione jasmine, with a woody base of patchouli, oak moss, and ambergris"
+    
+  kreed:
+    name: "Kreed"
+    notes:
+      primary: ["pineapple", "bergamot", "oakmoss", "vanilla", "musk"]
+    description: "Primary notes include pineapple, bergamot, oakmoss, vanilla, and musk"
+    
+  savage:
+    name: "Savage"
+    notes:
+      primary: ["bergamot", "Ambroxan", "lavender", "vetiver", "patchouli"]
+    description: "Primary notes of bergamot, Ambroxan, lavender, vetiver, and patchouli"
+    
+  woodland_elixir:
+    name: "Woodland Elixir"
+    notes:
+      top: ["Cherry", "Pear", "Ginger"]
+      middle: ["Sage", "Basil"]
+      base: ["Vanilla", "Amber", "Patchouli"]
+    description: "Top notes are Cherry, Pear, Ginger; middle notes are Sage and Basil; base notes are Vanilla, Amber and Patchouli"
+    
+  the_boss:
+    name: "The Boss"
+    notes:
+      top: ["Apple", "Plum", "Bergamot", "Lemon", "Oakmoss", "Geranium"]
+      middle: ["Cinnamon", "Mahogany", "Carnation"]
+      base: ["Vanilla", "Sandalwood", "Cedar", "Vetiver", "Olive Tree"]
+    description: "Top notes are Apple, Plum, Bergamot, Lemon, Oakmoss and Geranium; middle notes are Cinnamon, Mahogany and Carnation; base notes are Vanilla, Sandalwood, Cedar, Vetiver and Olive Tree" 

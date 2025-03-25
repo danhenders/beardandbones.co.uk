@@ -1,0 +1,22 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Robot Head -->
+  <rect x="25" y="20" width="50" height="40" rx="8" fill="#4A5568" />
+  
+  <!-- Robot Face -->
+  <rect x="30" y="25" width="40" height="30" rx="5" fill="#2D3748" />
+  
+  <!-- Robot Eyes -->
+  <circle cx="40" cy="40" r="5" fill="#38B2AC" />
+  <circle cx="60" cy="40" r="5" fill="#38B2AC" />
+  
+  <!-- Robot Mouth -->
+  <rect x="45" y="50" width="10" height="3" rx="1.5" fill="#E2E8F0" />
+  
+  <!-- Robot Ears -->
+  <rect x="20" y="30" width="5" height="15" rx="2" fill="#4A5568" />
+  <rect x="75" y="30" width="5" height="15" rx="2" fill="#4A5568" />
+  
+  <!-- Beard (Simplified) -->
+  <path d="M35 60 L50 75 L65 60" fill="#876447" />
+  <path d="M40 60 L50 70 L60 60" fill="#A0845C" />
+</svg> 

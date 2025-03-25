@@ -1,0 +1,204 @@
+metadata:
+  type: Policy
+  category: Returns
+  version: "2025"
+  last_updated: "2024-01-30"
+  effective_date: "2025-01-01"
+
+overview: |
+  Our returns policy is designed to ensure customer satisfaction while maintaining 
+  fair business practices. We handle each return with care and understanding.
+
+return_window:
+  standard: 30
+  unit: "days"
+  start_from: "delivery_date"
+  conditions:
+    - "Unopened products in original packaging"
+    - "Original packaging intact and undamaged"
+    - "Proof of purchase available"
+
+return_categories:
+  standard:
+    eligible: true
+    refund_type: "original_payment_method"
+    shipping_cost: "customer"
+    processing_time: "3-5 business days"
+    requirements:
+      - "Unopened product"
+      - "Original packaging"
+      - "Within 30 days"
+
+  allergic_reaction:
+    eligible: true
+    refund_type: "original_payment_method"
+    shipping_cost: "customer"
+    processing_time: "1-2 business days"
+    requirements:
+      - "Report within 48 hours of first use"
+      - "Photo of reaction (if visible)"
+      - "List of known allergies"
+
+  damaged_on_arrival:
+    eligible: true
+    refund_type: "original_payment_method"
+    shipping_cost: "company"
+    processing_time: "1-2 business days"
+    requirements:
+      - "Report within 48 hours"
+      - "Photos of damage"
+      - "Original packaging"
+
+  wrong_item:
+    eligible: true
+    refund_type: "original_payment_method"
+    shipping_cost: "company"
+    processing_time: "1-2 business days"
+    requirements:
+      - "Report within 48 hours"
+      - "Photo of received item"
+      - "Original packaging"
+
+process:
+  steps:
+    1: 
+      title: "Initiate Return"
+      action: "Contact customer service"
+      requirements:
+        - "Order number"
+        - "Return reason"
+        - "Product details"
+      
+    2:
+      title: "Return Shipping"
+      action: "Send item back"
+      requirements:
+        - "Tracked shipping service"
+        - "Proof of postage"
+        - "Secure packaging"
+      
+    3:
+      title: "Processing"
+      action: "Warehouse inspection"
+      timeline: "3-5 business days"
+      notification: "Email confirmation"
+
+refund_details:
+  included:
+    - "Full product cost for unopened returns"
+    - "Original shipping cost for incorrect items"
+  excluded:
+    - "Return shipping costs (except specific cases)"
+    - "Processing fee for undelivered orders (£1.50)"
+  timeline:
+    processing: "3-5 business days"
+    bank_appearance: "5-10 business days"
+
+ai_handling:
+  sentiment_analysis:
+    negative_indicators:
+      - "angry"
+      - "frustrated"
+      - "disappointed"
+      - "upset"
+      - "waste of money"
+    priority_levels:
+      high:
+        - "allergic reaction"
+        - "damaged product"
+        - "wrong item"
+      medium:
+        - "doesn't work as expected"
+        - "changed mind"
+      low:
+        - "general inquiry"
+        - "process question"
+
+  probing_questions:
+    order_details:
+      - "Could you please provide your order number?"
+      - "When did you receive your order?"
+      - "Which specific product are you looking to return?"
+    
+    issue_clarification:
+      allergic:
+        - "When did you first notice the reaction?"
+        - "Have you had similar reactions to other products?"
+        - "What symptoms are you experiencing?"
+      
+      damage:
+        - "Where is the damage located on the product?"
+        - "Was the shipping package also damaged?"
+        - "Do you have photos of the damage?"
+      
+      satisfaction:
+        - "What specifically didn't meet your expectations?"
+        - "Have you tried the product, or is it still sealed?"
+        - "Would you be interested in trying a different product instead?"
+
+  response_strategies:
+    high_emotion:
+      - "Acknowledge feelings immediately"
+      - "Show understanding and empathy"
+      - "Provide immediate action steps"
+      - "Offer direct contact if needed"
+    
+    technical_issue:
+      - "Gather specific details"
+      - "Explain technical aspects clearly"
+      - "Provide step-by-step solutions"
+      - "Include relevant documentation"
+    
+    general_inquiry:
+      - "Confirm understanding"
+      - "Provide clear process steps"
+      - "Set accurate expectations"
+      - "Offer additional assistance"
+
+  information_control:
+    do_not_reveal:
+      - "Internal processing procedures"
+      - "Specific refund approval criteria"
+      - "Employee information"
+      - "Other customer cases"
+      - "Warehouse security details"
+    
+    always_verify:
+      - "Order number"
+      - "Customer identity"
+      - "Purchase date"
+      - "Product details"
+    
+    escalation_triggers:
+      - "Legal threats"
+      - "Multiple returns history"
+      - "Suspected fraud"
+      - "Health-related complaints"
+
+ai_response_templates:
+  initial_contact: |
+    Thank you for contacting us about your return. I understand this is regarding {product_name}.
+    To help you best, I'll need a few details:
+    {probing_questions}
+    
+  return_approval: |
+    I've reviewed your return request for {product_name}.
+    Based on our policy, this return is {eligibility_status}.
+    Here are the next steps:
+    {return_steps}
+    
+  refund_explanation: |
+    Your refund of £{amount} will be processed to your original payment method.
+    This includes:
+    {refund_breakdown}
+    Expected timeline: {refund_timeline}
+    
+  special_case: |
+    I understand you're experiencing {issue_type} with your {product_name}.
+    This is a priority for us, and I'll help you resolve this immediately.
+    {special_instructions}
+
+  escalation: |
+    I understand this is a sensitive situation.
+    I'm escalating this to our specialist team who will contact you within {timeline}.
+    In the meantime, {immediate_actions} 

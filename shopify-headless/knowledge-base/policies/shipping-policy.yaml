@@ -1,0 +1,292 @@
+metadata:
+  type: Policy
+  category: Shipping
+  version: "2025"
+  last_updated: "2024-02-21"
+  effective_date: "2025-01-01"
+
+overview: |
+  This document outlines our shipping rates, delivery times, and important information 
+  for both domestic and international orders. We dispatch orders Monday through Friday 
+  (excluding bank holidays) with same-day dispatch available for orders placed before 2 PM.
+
+dispatch_info:
+  operating_hours:
+    days: "Monday to Friday"
+    same_day_cutoff: "2 PM (UK Time)"
+    exclusions: "Bank Holidays"
+    service_type: "All deliveries are tracked"
+    seasonal_variations:
+      christmas:
+        period: "December 15 - January 2"
+        note: "Extended delivery times may apply"
+        last_order_dates:
+          uk: "December 20"
+          europe: "December 15"
+          us: "December 10"
+      bank_holidays:
+        note: "No dispatch on UK bank holidays"
+        handling: "Orders will be dispatched next working day"
+  
+  processing_rules:
+    before_cutoff:
+      action: "Same day dispatch"
+      conditions: "Order placed before 2 PM on working day"
+    after_cutoff:
+      action: "Next working day dispatch"
+      conditions: "Order placed after 2 PM or on non-working day"
+    non_working_days:
+      - "Saturday"
+      - "Sunday"
+      - "Bank Holidays"
+      - "December 25-26"
+      - "January 1"
+    delivery_calculation:
+      start_from: "Dispatch date"
+      exclude_days: ["Saturday", "Sunday", "Bank Holidays"]
+      working_day_definition: "Monday-Friday, excluding holidays"
+
+shipping_rates:
+  united_kingdom:
+    standard_delivery: 4.50
+    delivery_time: "2-4 working days"
+    free_shipping_threshold: 40.00
+    courier: "Royal Mail Tracked 48"
+    content: |
+      Standard UK delivery is £4.50 with free shipping on orders over £40.
+      Delivery typically takes 2-4 working days via Royal Mail Tracked service.
+      Note: Working days are Monday-Friday, excluding bank holidays.
+      Orders placed after 2 PM will be dispatched the next working day.
+
+  united_states:
+    standard_delivery: 8.00
+    delivery_time: "7-14 working days"
+    free_shipping: false
+    courier: "Royal Mail Tracked"
+    content: |
+      US shipping is £8 (~$10 USD) with delivery in 7-14 working days.
+      All shipments are tracked via Royal Mail international service.
+
+  europe:
+    regions:
+      western:
+        countries: ["Austria", "Belgium", "France", "Germany", "Ireland", "Luxembourg", "Netherlands", "Switzerland"]
+        cost: 6.00
+        delivery_time: "5-7 working days"
+      scandinavia:
+        countries: ["Denmark", "Finland", "Norway", "Sweden"]
+        cost: 6.50
+        delivery_time: "5-7 working days"
+      southern:
+        countries: ["Italy", "Portugal", "Spain"]
+        cost: 6.50
+        delivery_time: "5-7 working days"
+      eastern:
+        countries: ["Croatia", "Estonia", "Latvia", "Lithuania", "Poland", "Slovakia", "Slovenia"]
+        cost: 7.00
+        delivery_time: "5-10 working days"
+
+important_info:
+  delivery_times:
+    content: |
+      - All delivery times are calculated from dispatch date
+      - Delivery times are estimates and not guaranteed
+      - International deliveries may be subject to customs delays
+      - Working days are Monday-Friday only
+      - Orders placed after 2 PM will be processed the next working day
+      - Weekend orders will be processed on Monday
+      - Bank holiday orders will be processed on the next working day
+      - During peak seasons (e.g., Christmas), delivery may take longer
+      - Severe weather conditions may affect delivery times
+      - Royal Mail industrial action may cause delays
+
+  tracking_statuses:
+    content: |
+      - "Pre-Transit": Order processed, awaiting collection
+      - "In Transit": Order with Royal Mail
+      - "Out for Delivery": Being delivered today
+      - "Delivered": Successfully delivered
+      - "Exception": Delivery issue encountered
+      - "Attempted Delivery": Delivery attempted but unsuccessful
+      - "Held": Package held at customer's request
+      - "Returned": Package being returned to sender
+
+  returns:
+    content: |
+      - Processing fee of £1.50 for returned undelivered orders
+      - Refunds exclude original shipping charge and processing fee
+      - Returns must be sent with tracked shipping (customer's responsibility)
+
+  international:
+    content: |
+      - Import taxes and customs duties are the recipient's responsibility
+      - We cannot predict or calculate these fees
+      - Check your country's import regulations before ordering
+      - Customs delays are common and beyond our control
+      - Some countries may have additional delivery requirements
+      - Tracking updates may be less frequent for international orders
+      - Remote areas may have extended delivery times
+      - Customs forms will list full order value and contents
+
+contact:
+  warehouse_address: |
+    Beard and Bones
+    Unit 11 Bartlett Court
+    Sea King Road
+    Yeovil, Somerset
+    BA20 2NZ
+    United Kingdom
+    
+  support:
+    email: "help@beardandbones.co.uk"
+    response_time: "Within 1 business day"
+
+ai_response_templates:
+  shipping_query: |
+    Thank you for asking about shipping to {country}.
+    Your shipping cost will be £{cost} with delivery in {delivery_time}.
+    {free_shipping_message}
+    Please note: We dispatch Monday-Friday before 2 PM (UK time).
+    Orders after 2 PM will be dispatched the next working day.
+    
+  delivery_time_query: |
+    For delivery to {country}, typical delivery time is {delivery_time}.
+    Important dispatch information:
+    - Orders before 2 PM: Same-day dispatch
+    - Orders after 2 PM: Next working day dispatch
+    - Weekend orders: Processed Monday
+    - Delivery time starts from dispatch date
+    
+  order_status: |
+    Your order #{order_number} placed on {order_date} at {order_time}:
+    {if before_cutoff and is_working_day}
+    Will be dispatched today via Royal Mail Tracked 48.
+    Expected delivery: {earliest_delivery} - {latest_delivery}
+    {else}
+    Will be dispatched on {next_dispatch_date} via Royal Mail Tracked 48.
+    Expected delivery: {earliest_delivery} - {latest_delivery}
+    {endif}
+    
+  tracking_info: |
+    Your order is being delivered by Royal Mail Tracked 48.
+    Tracking number: {tracking_number}
+    Track your order at: {tracking_url}
+    {if delivered}
+    Delivered on: {delivery_date}
+    {else}
+    Expected delivery: {delivery_estimate}
+    {endif}
+
+  delivery_status: |
+    Status: {status}
+    {switch status}
+    {case "Pre-Transit"}
+    Your order has been processed and is awaiting collection by Royal Mail.
+    {case "In Transit"}
+    Your order is currently with Royal Mail and on its way.
+    {case "Out for Delivery"}
+    Good news! Your order is out for delivery today.
+    {case "Exception"}
+    There's been a delivery issue: {exception_details}
+    Please contact us if you need assistance.
+    {case "Attempted Delivery"}
+    Delivery was attempted but unsuccessful. 
+    Reason: {attempt_details}
+    Next attempt: {next_attempt_date}
+    {case "Held"}
+    Your package is being held as requested.
+    Location: {hold_location}
+    Until: {hold_until_date}
+    {endswitch}
+
+  seasonal_update: |
+    {if is_peak_season}
+    Note: We are currently in our peak season ({season_name}).
+    - Last order dates for Christmas delivery:
+      UK: December 20
+      Europe: December 15
+      US: December 10
+    - Delivery times may be slightly longer than usual
+    - Please order early to ensure timely delivery
+    {endif}
+
+  weather_delay: |
+    {if has_weather_warning}
+    Note: Severe weather conditions ({weather_type}) may affect delivery times.
+    Area affected: {affected_region}
+    Expected impact: {delay_estimate}
+    {endif}
+
+delivery_calculations:
+  working_days:
+    definition: "Monday through Friday"
+    exclusions:
+      - type: "Weekends"
+        days: ["Saturday", "Sunday"]
+      - type: "Bank Holidays"
+        source: "UK Government Calendar"
+      - type: "Seasonal"
+        dates: ["December 25-26", "January 1"]
+        note: "Additional dates may apply"
+  
+  dispatch_rules:
+    same_day:
+      conditions:
+        - "Order placed before 2 PM"
+        - "Current day is working day"
+        - "No severe weather warnings"
+        - "Not during system maintenance"
+        - "Normal order volume"
+    next_day:
+      conditions:
+        - "Order placed after 2 PM"
+        - "Weekend order"
+        - "Bank holiday order"
+        - "Peak season overflow"
+        - "System maintenance period"
+  
+  delivery_windows:
+    uk:
+      min_days: 2
+      max_days: 4
+      note: "Working days only"
+      peak_season_adjustment: "+1-2 working days"
+    international:
+      europe:
+        min_days: 5
+        max_days: 7
+        customs_delay: "+2-5 working days"
+      us:
+        min_days: 7
+        max_days: 14
+        customs_delay: "+3-7 working days"
+      
+  status_tracking:
+    update_frequency:
+      uk: "Every working day"
+      international: "Every 2-3 working days"
+    status_codes:
+      - code: "PT"
+        status: "Pre-Transit"
+        description: "Order processed, awaiting collection"
+      - code: "IT"
+        status: "In Transit"
+        description: "With Royal Mail"
+      - code: "OD"
+        status: "Out for Delivery"
+        description: "Being delivered today"
+      - code: "DL"
+        status: "Delivered"
+        description: "Successfully delivered"
+      - code: "EX"
+        status: "Exception"
+        description: "Delivery issue encountered"
+      - code: "AD"
+        status: "Attempted Delivery"
+        description: "Delivery attempted but unsuccessful"
+      - code: "HD"
+        status: "Held"
+        description: "Package held at customer's request"
+      - code: "RT"
+        status: "Returned"
+        description: "Package being returned to sender" 
